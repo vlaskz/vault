@@ -21,3 +21,10 @@ C:\Users\Sam\Source\Repos\vault\Vault\obj\Debug\Vault.frmConfCaixa.resources
 C:\Users\Sam\Source\Repos\vault\Vault\obj\Debug\Vault.frmInicio.resources
 C:\Users\Sam\Source\Repos\vault\Vault\obj\Debug\Vault.Properties.Resources.resources
 C:\Users\Sam\Source\Repos\vault\Vault\obj\Debug\Vault.csproj.GenerateResource.Cache
+C:\Users\FINANCEIRO\Source\Repos\vault\Vault\bin\Debug\Vault.exe
+C:\Users\FINANCEIRO\Source\Repos\vault\Vault\bin\Debug\Vault.pdb
+C:\Users\FINANCEIRO\Source\Repos\vault\Vault\obj\Debug\Vault.csprojResolveAssemblyReference.cache
+C:\Users\FINANCEIRO\Source\Repos\vault\Vault\obj\Debug\Vault.frmConfCaixa.resources
+C:\Users\FINANCEIRO\Source\Repos\vault\Vault\obj\Debug\Vault.frmInicio.resources
+C:\Users\FINANCEIRO\Source\Repos\vault\Vault\obj\Debug\Vault.Properties.Resources.resources
+C:\Users\FINANCEIRO\Source\Repos\vault\Vault\obj\Debug\Vault.csproj.GenerateResource.Cache

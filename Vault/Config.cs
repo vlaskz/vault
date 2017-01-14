@@ -2,9 +2,9 @@
 {
     class Config
     {
-        public static string confcaixa = @"c:\vault\confcaixa.dat";
-        public static string operador = @"c:\vault\operador.dat";
-        public static string checkout = @"c:\vault\checkout.dat";
+        public static string confcaixa = @"C:\Users\FINANCEIRO\Source\Repos\vault\Vault\VaultData\confcaixa.dat";
+        public static string operador = @"C:\Users\FINANCEIRO\Source\Repos\vault\Vault\VaultData\operador.dat";
+        public static string checkout = @"C:\Users\FINANCEIRO\Source\Repos\vault\Vault\VaultData\checkout.dat";
 
     }
 }

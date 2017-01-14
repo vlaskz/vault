@@ -43,20 +43,20 @@
             this.gbx0.Controls.Add(this.label2);
             this.gbx0.Controls.Add(this.cbxOp0);
             this.gbx0.Controls.Add(this.label1);
-            this.gbx0.Location = new System.Drawing.Point(13, 13);
+            this.gbx0.Location = new System.Drawing.Point(12, 12);
             this.gbx0.Name = "gbx0";
-            this.gbx0.Size = new System.Drawing.Size(190, 478);
+            this.gbx0.Size = new System.Drawing.Size(201, 354);
             this.gbx0.TabIndex = 0;
             this.gbx0.TabStop = false;
             this.gbx0.Text = "Caixa";
             // 
             // tbSalAt0
             // 
-            this.tbSalAt0.Location = new System.Drawing.Point(73, 45);
+            this.tbSalAt0.Location = new System.Drawing.Point(73, 49);
             this.tbSalAt0.MaxLength = 10;
             this.tbSalAt0.Name = "tbSalAt0";
             this.tbSalAt0.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbSalAt0.Size = new System.Drawing.Size(112, 20);
+            this.tbSalAt0.Size = new System.Drawing.Size(122, 20);
             this.tbSalAt0.TabIndex = 6;
             this.tbSalAt0.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSalAt0_KeyPress);
             this.tbSalAt0.Leave += new System.EventHandler(this.tbSalAt0_Leave);
@@ -64,7 +64,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 51);
+            this.label2.Location = new System.Drawing.Point(6, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 5;
@@ -75,13 +75,13 @@
             this.cbxOp0.FormattingEnabled = true;
             this.cbxOp0.Location = new System.Drawing.Point(73, 21);
             this.cbxOp0.Name = "cbxOp0";
-            this.cbxOp0.Size = new System.Drawing.Size(112, 21);
+            this.cbxOp0.Size = new System.Drawing.Size(122, 21);
             this.cbxOp0.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 24);
+            this.label1.Location = new System.Drawing.Point(6, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 2;
@@ -100,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 534);
+            this.ClientSize = new System.Drawing.Size(225, 416);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.gbx0);
             this.Name = "frmConfCaixa";
