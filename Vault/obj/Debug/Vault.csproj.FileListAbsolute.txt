@@ -11,3 +11,6 @@ C:\Users\Sam\Documents\Visual Studio 2015\Projects\Vault\Vault\obj\Debug\Vault.c
 C:\Users\Sam\Source\Repos\vault\Vault\bin\Debug\Vault.exe.config
 C:\Users\Sam\Source\Repos\vault\Vault\obj\Debug\Vault.exe
 C:\Users\Sam\Source\Repos\vault\Vault\obj\Debug\Vault.pdb
+C:\Users\FINANCEIRO\Source\Repos\vault\Vault\bin\Debug\Vault.exe.config
+C:\Users\FINANCEIRO\Source\Repos\vault\Vault\obj\Debug\Vault.exe
+C:\Users\FINANCEIRO\Source\Repos\vault\Vault\obj\Debug\Vault.pdb

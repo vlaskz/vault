@@ -26,7 +26,7 @@ namespace Vault
 
 
             return result;
-        }
+        } //le o arquivo
 
         public void print(ArrayList list)
         {
@@ -34,7 +34,7 @@ namespace Vault
             {
                 Console.WriteLine(list[i]);
             }
-        }
+        } //print na tela (será mudado para algum tipo de relatório)
 
         public void append(string filePath, ArrayList list)
         {
@@ -45,7 +45,7 @@ namespace Vault
                 sw.Flush();
             }
             sw.Close();
-        }
+        }//adiciona os dados na linha seguinte do arquivo
 
         public ArrayList search(ArrayList list, String data)
         {
@@ -58,7 +58,7 @@ namespace Vault
                 }
             }
             return result;
-        }
+        } //busca e retorna resultados numa Arraylist (buffer)
 
         public void clean(string file)
         {
@@ -69,11 +69,11 @@ namespace Vault
 
             }
 
-        }
+        } //limpa o arquivo (será usado como função secreta, perigoso demais, criar uma função de backup para isso antes.
 
         public void add(string file, ArrayList list)
         {
 
-        }
+        } //iria adicionar as linhas já em seu formato específico : necessidade discutivel.
     }
 }
