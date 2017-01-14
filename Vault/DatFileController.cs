@@ -45,7 +45,7 @@ namespace Vault
                 sw.Flush();
             }
             sw.Close();
-        }//adiciona os dados na linha seguinte do arquivo
+        } //adiciona os dados na linha seguinte do arquivo
 
         public ArrayList search(ArrayList list, String data)
         {
