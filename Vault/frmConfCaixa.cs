@@ -98,6 +98,16 @@ namespace Vault
         {
             tbValidate(e);
         }
+
+        private void tbCartao_Leave(object sender, EventArgs e)
+        {
+            tbFormat(tbCartao);
+        }
+
+        private void tbCartao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            tbValidate(e);
+        }
     }
 }
 
