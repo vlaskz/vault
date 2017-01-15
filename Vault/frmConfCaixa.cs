@@ -51,6 +51,13 @@ namespace Vault
             tb.Text = tb.Text.PadRight(8);
         }
 
+        private void updateGbxCaixa()
+        {
+            if(cbxCheckout.SelectedItem!=null&&cbxOperador.SelectedItem!=null)
+            gbxCaixa.Text = "Caixa:" + cbxCheckout.SelectedItem.ToString() + "." + cbxOperador.SelectedItem.ToString();
+        }
+
+
         private void tbSalAt0_KeyPress(object sender, KeyPressEventArgs e)
         {
             tbValidate(e);
@@ -72,11 +79,15 @@ namespace Vault
         private void cbxOperador_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbxOperador.Enabled = false;
+            updateGbxCaixa();
         }
 
         private void cbxCheckout_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbxCheckout.Enabled=false;
+            updateGbxCaixa();
+            
+            
         }
 
         private void lblCheckout_DoubleClick(object sender, EventArgs e)
