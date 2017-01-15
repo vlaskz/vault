@@ -40,11 +40,31 @@
             this.lblCheckout = new System.Windows.Forms.Label();
             this.tbCartao = new System.Windows.Forms.TextBox();
             this.lblCartao = new System.Windows.Forms.Label();
+            this.tbNP = new System.Windows.Forms.TextBox();
+            this.lblNP = new System.Windows.Forms.Label();
+            this.tbDebAuto = new System.Windows.Forms.TextBox();
+            this.lblDebito = new System.Windows.Forms.Label();
+            this.tbCheque = new System.Windows.Forms.TextBox();
+            this.lblCheque = new System.Windows.Forms.Label();
+            this.tbBoleto = new System.Windows.Forms.TextBox();
+            this.lblBoleto = new System.Windows.Forms.Label();
+            this.tbDesconto = new System.Windows.Forms.TextBox();
+            this.lblDesconto = new System.Windows.Forms.Label();
             this.gbxCaixa.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxCaixa
             // 
+            this.gbxCaixa.Controls.Add(this.tbDesconto);
+            this.gbxCaixa.Controls.Add(this.lblDesconto);
+            this.gbxCaixa.Controls.Add(this.tbBoleto);
+            this.gbxCaixa.Controls.Add(this.lblBoleto);
+            this.gbxCaixa.Controls.Add(this.tbCheque);
+            this.gbxCaixa.Controls.Add(this.lblCheque);
+            this.gbxCaixa.Controls.Add(this.tbDebAuto);
+            this.gbxCaixa.Controls.Add(this.lblDebito);
+            this.gbxCaixa.Controls.Add(this.tbNP);
+            this.gbxCaixa.Controls.Add(this.lblNP);
             this.gbxCaixa.Controls.Add(this.tbCartao);
             this.gbxCaixa.Controls.Add(this.lblCartao);
             this.gbxCaixa.Controls.Add(this.cbxCheckout);
@@ -55,9 +75,9 @@
             this.gbxCaixa.Controls.Add(this.lblSaldoAtual);
             this.gbxCaixa.Controls.Add(this.cbxOperador);
             this.gbxCaixa.Controls.Add(this.lblOperador);
-            this.gbxCaixa.Location = new System.Drawing.Point(12, 12);
+            this.gbxCaixa.Location = new System.Drawing.Point(5, 4);
             this.gbxCaixa.Name = "gbxCaixa";
-            this.gbxCaixa.Size = new System.Drawing.Size(265, 392);
+            this.gbxCaixa.Size = new System.Drawing.Size(207, 481);
             this.gbxCaixa.TabIndex = 0;
             this.gbxCaixa.TabStop = false;
             this.gbxCaixa.Text = "Caixa";
@@ -66,11 +86,11 @@
             // tbSaldoAtual
             // 
             this.tbSaldoAtual.Enabled = false;
-            this.tbSaldoAtual.Location = new System.Drawing.Point(73, 79);
+            this.tbSaldoAtual.Location = new System.Drawing.Point(73, 58);
             this.tbSaldoAtual.MaxLength = 10;
             this.tbSaldoAtual.Name = "tbSaldoAtual";
             this.tbSaldoAtual.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbSaldoAtual.Size = new System.Drawing.Size(186, 20);
+            this.tbSaldoAtual.Size = new System.Drawing.Size(130, 20);
             this.tbSaldoAtual.TabIndex = 6;
             this.tbSaldoAtual.TextChanged += new System.EventHandler(this.tbSaldoAtual_TextChanged);
             this.tbSaldoAtual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSalAt0_KeyPress);
@@ -79,7 +99,7 @@
             // lblSaldoAtual
             // 
             this.lblSaldoAtual.AutoSize = true;
-            this.lblSaldoAtual.Location = new System.Drawing.Point(6, 82);
+            this.lblSaldoAtual.Location = new System.Drawing.Point(6, 61);
             this.lblSaldoAtual.Name = "lblSaldoAtual";
             this.lblSaldoAtual.Size = new System.Drawing.Size(61, 13);
             this.lblSaldoAtual.TabIndex = 5;
@@ -89,16 +109,16 @@
             // cbxOperador
             // 
             this.cbxOperador.FormattingEnabled = true;
-            this.cbxOperador.Location = new System.Drawing.Point(73, 51);
+            this.cbxOperador.Location = new System.Drawing.Point(73, 36);
             this.cbxOperador.Name = "cbxOperador";
-            this.cbxOperador.Size = new System.Drawing.Size(186, 21);
+            this.cbxOperador.Size = new System.Drawing.Size(130, 21);
             this.cbxOperador.TabIndex = 3;
             this.cbxOperador.SelectedIndexChanged += new System.EventHandler(this.cbxOperador_SelectedIndexChanged);
             // 
             // lblOperador
             // 
             this.lblOperador.AutoSize = true;
-            this.lblOperador.Location = new System.Drawing.Point(6, 54);
+            this.lblOperador.Location = new System.Drawing.Point(6, 39);
             this.lblOperador.Name = "lblOperador";
             this.lblOperador.Size = new System.Drawing.Size(51, 13);
             this.lblOperador.TabIndex = 2;
@@ -116,11 +136,11 @@
             // 
             // tbDinheiro
             // 
-            this.tbDinheiro.Location = new System.Drawing.Point(73, 107);
+            this.tbDinheiro.Location = new System.Drawing.Point(73, 79);
             this.tbDinheiro.MaxLength = 10;
             this.tbDinheiro.Name = "tbDinheiro";
             this.tbDinheiro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbDinheiro.Size = new System.Drawing.Size(186, 20);
+            this.tbDinheiro.Size = new System.Drawing.Size(130, 20);
             this.tbDinheiro.TabIndex = 8;
             this.tbDinheiro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDinheiro_KeyPress);
             this.tbDinheiro.Leave += new System.EventHandler(this.tbDinheiro_Leave);
@@ -128,7 +148,7 @@
             // lblDinheiro
             // 
             this.lblDinheiro.AutoSize = true;
-            this.lblDinheiro.Location = new System.Drawing.Point(6, 110);
+            this.lblDinheiro.Location = new System.Drawing.Point(7, 82);
             this.lblDinheiro.Name = "lblDinheiro";
             this.lblDinheiro.Size = new System.Drawing.Size(46, 13);
             this.lblDinheiro.TabIndex = 7;
@@ -137,16 +157,16 @@
             // cbxCheckout
             // 
             this.cbxCheckout.FormattingEnabled = true;
-            this.cbxCheckout.Location = new System.Drawing.Point(73, 23);
+            this.cbxCheckout.Location = new System.Drawing.Point(73, 14);
             this.cbxCheckout.Name = "cbxCheckout";
-            this.cbxCheckout.Size = new System.Drawing.Size(186, 21);
+            this.cbxCheckout.Size = new System.Drawing.Size(130, 21);
             this.cbxCheckout.TabIndex = 10;
             this.cbxCheckout.SelectedIndexChanged += new System.EventHandler(this.cbxCheckout_SelectedIndexChanged);
             // 
             // lblCheckout
             // 
             this.lblCheckout.AutoSize = true;
-            this.lblCheckout.Location = new System.Drawing.Point(6, 26);
+            this.lblCheckout.Location = new System.Drawing.Point(7, 17);
             this.lblCheckout.Name = "lblCheckout";
             this.lblCheckout.Size = new System.Drawing.Size(53, 13);
             this.lblCheckout.TabIndex = 9;
@@ -155,11 +175,11 @@
             // 
             // tbCartao
             // 
-            this.tbCartao.Location = new System.Drawing.Point(73, 135);
+            this.tbCartao.Location = new System.Drawing.Point(73, 100);
             this.tbCartao.MaxLength = 10;
             this.tbCartao.Name = "tbCartao";
             this.tbCartao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbCartao.Size = new System.Drawing.Size(186, 20);
+            this.tbCartao.Size = new System.Drawing.Size(130, 20);
             this.tbCartao.TabIndex = 12;
             this.tbCartao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCartao_KeyPress);
             this.tbCartao.Leave += new System.EventHandler(this.tbCartao_Leave);
@@ -167,23 +187,113 @@
             // lblCartao
             // 
             this.lblCartao.AutoSize = true;
-            this.lblCartao.Location = new System.Drawing.Point(6, 138);
+            this.lblCartao.Location = new System.Drawing.Point(7, 103);
             this.lblCartao.Name = "lblCartao";
             this.lblCartao.Size = new System.Drawing.Size(38, 13);
             this.lblCartao.TabIndex = 11;
             this.lblCartao.Text = "Cartão";
             // 
+            // tbNP
+            // 
+            this.tbNP.Location = new System.Drawing.Point(73, 122);
+            this.tbNP.MaxLength = 10;
+            this.tbNP.Name = "tbNP";
+            this.tbNP.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbNP.Size = new System.Drawing.Size(130, 20);
+            this.tbNP.TabIndex = 14;
+            // 
+            // lblNP
+            // 
+            this.lblNP.AutoSize = true;
+            this.lblNP.Location = new System.Drawing.Point(7, 125);
+            this.lblNP.Name = "lblNP";
+            this.lblNP.Size = new System.Drawing.Size(22, 13);
+            this.lblNP.TabIndex = 13;
+            this.lblNP.Text = "NP";
+            // 
+            // tbDebAuto
+            // 
+            this.tbDebAuto.Location = new System.Drawing.Point(73, 144);
+            this.tbDebAuto.MaxLength = 10;
+            this.tbDebAuto.Name = "tbDebAuto";
+            this.tbDebAuto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbDebAuto.Size = new System.Drawing.Size(130, 20);
+            this.tbDebAuto.TabIndex = 16;
+            // 
+            // lblDebito
+            // 
+            this.lblDebito.AutoSize = true;
+            this.lblDebito.Location = new System.Drawing.Point(7, 147);
+            this.lblDebito.Name = "lblDebito";
+            this.lblDebito.Size = new System.Drawing.Size(58, 13);
+            this.lblDebito.TabIndex = 15;
+            this.lblDebito.Text = "Déb. Auto.";
+            // 
+            // tbCheque
+            // 
+            this.tbCheque.Location = new System.Drawing.Point(73, 165);
+            this.tbCheque.MaxLength = 10;
+            this.tbCheque.Name = "tbCheque";
+            this.tbCheque.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbCheque.Size = new System.Drawing.Size(130, 20);
+            this.tbCheque.TabIndex = 18;
+            // 
+            // lblCheque
+            // 
+            this.lblCheque.AutoSize = true;
+            this.lblCheque.Location = new System.Drawing.Point(7, 168);
+            this.lblCheque.Name = "lblCheque";
+            this.lblCheque.Size = new System.Drawing.Size(44, 13);
+            this.lblCheque.TabIndex = 17;
+            this.lblCheque.Text = "Cheque";
+            // 
+            // tbBoleto
+            // 
+            this.tbBoleto.Location = new System.Drawing.Point(73, 186);
+            this.tbBoleto.MaxLength = 10;
+            this.tbBoleto.Name = "tbBoleto";
+            this.tbBoleto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbBoleto.Size = new System.Drawing.Size(130, 20);
+            this.tbBoleto.TabIndex = 20;
+            // 
+            // lblBoleto
+            // 
+            this.lblBoleto.AutoSize = true;
+            this.lblBoleto.Location = new System.Drawing.Point(7, 189);
+            this.lblBoleto.Name = "lblBoleto";
+            this.lblBoleto.Size = new System.Drawing.Size(37, 13);
+            this.lblBoleto.TabIndex = 19;
+            this.lblBoleto.Text = "Boleto";
+            // 
+            // tbDesconto
+            // 
+            this.tbDesconto.Location = new System.Drawing.Point(73, 207);
+            this.tbDesconto.MaxLength = 10;
+            this.tbDesconto.Name = "tbDesconto";
+            this.tbDesconto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbDesconto.Size = new System.Drawing.Size(130, 20);
+            this.tbDesconto.TabIndex = 22;
+            // 
+            // lblDesconto
+            // 
+            this.lblDesconto.AutoSize = true;
+            this.lblDesconto.Location = new System.Drawing.Point(7, 210);
+            this.lblDesconto.Name = "lblDesconto";
+            this.lblDesconto.Size = new System.Drawing.Size(53, 13);
+            this.lblDesconto.TabIndex = 21;
+            this.lblDesconto.Text = "Desconto";
+            // 
             // frmConfCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(289, 416);
+            this.ClientSize = new System.Drawing.Size(217, 497);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.gbxCaixa);
             this.Name = "frmConfCaixa";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Conferência de Caixa";
+            this.Text = "Vault - ConfCaixa";
             this.Load += new System.EventHandler(this.frmConfCaixa_Load);
             this.gbxCaixa.ResumeLayout(false);
             this.gbxCaixa.PerformLayout();
@@ -205,5 +315,15 @@
         private System.Windows.Forms.Label lblCheckout;
         private System.Windows.Forms.TextBox tbCartao;
         private System.Windows.Forms.Label lblCartao;
+        private System.Windows.Forms.TextBox tbDesconto;
+        private System.Windows.Forms.Label lblDesconto;
+        private System.Windows.Forms.TextBox tbBoleto;
+        private System.Windows.Forms.Label lblBoleto;
+        private System.Windows.Forms.TextBox tbCheque;
+        private System.Windows.Forms.Label lblCheque;
+        private System.Windows.Forms.TextBox tbDebAuto;
+        private System.Windows.Forms.Label lblDebito;
+        private System.Windows.Forms.TextBox tbNP;
+        private System.Windows.Forms.Label lblNP;
     }
 }

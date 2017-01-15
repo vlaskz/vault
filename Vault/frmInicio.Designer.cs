@@ -35,17 +35,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 28);
+            this.label1.Location = new System.Drawing.Point(19, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 13);
+            this.label1.Size = new System.Drawing.Size(146, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Selecione o módulo desejado:";
+            this.label1.Text = "Bem vindo!\r\nSelecione o módulo desejado";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnConfCaixa
             // 
-            this.btnConfCaixa.Location = new System.Drawing.Point(41, 82);
+            this.btnConfCaixa.Location = new System.Drawing.Point(31, 53);
             this.btnConfCaixa.Name = "btnConfCaixa";
-            this.btnConfCaixa.Size = new System.Drawing.Size(146, 47);
+            this.btnConfCaixa.Size = new System.Drawing.Size(122, 39);
             this.btnConfCaixa.TabIndex = 1;
             this.btnConfCaixa.Text = "Conferência de Caixa";
             this.btnConfCaixa.UseVisualStyleBackColor = true;
@@ -55,11 +56,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(239, 156);
+            this.ClientSize = new System.Drawing.Size(187, 118);
             this.Controls.Add(this.btnConfCaixa);
             this.Controls.Add(this.label1);
             this.Name = "frmInicio";
-            this.Text = "frmInicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Vault";
             this.ResumeLayout(false);
             this.PerformLayout();
 
