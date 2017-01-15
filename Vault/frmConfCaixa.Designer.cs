@@ -57,7 +57,7 @@
             this.gbxCaixa.Controls.Add(this.lblOperador);
             this.gbxCaixa.Location = new System.Drawing.Point(12, 12);
             this.gbxCaixa.Name = "gbxCaixa";
-            this.gbxCaixa.Size = new System.Drawing.Size(201, 392);
+            this.gbxCaixa.Size = new System.Drawing.Size(265, 392);
             this.gbxCaixa.TabIndex = 0;
             this.gbxCaixa.TabStop = false;
             this.gbxCaixa.Text = "Caixa";
@@ -70,8 +70,9 @@
             this.tbSaldoAtual.MaxLength = 10;
             this.tbSaldoAtual.Name = "tbSaldoAtual";
             this.tbSaldoAtual.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbSaldoAtual.Size = new System.Drawing.Size(122, 20);
+            this.tbSaldoAtual.Size = new System.Drawing.Size(186, 20);
             this.tbSaldoAtual.TabIndex = 6;
+            this.tbSaldoAtual.TextChanged += new System.EventHandler(this.tbSaldoAtual_TextChanged);
             this.tbSaldoAtual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSalAt0_KeyPress);
             this.tbSaldoAtual.Leave += new System.EventHandler(this.tbSalAt0_Leave);
             // 
@@ -83,13 +84,14 @@
             this.lblSaldoAtual.Size = new System.Drawing.Size(61, 13);
             this.lblSaldoAtual.TabIndex = 5;
             this.lblSaldoAtual.Text = "Saldo Atual";
+            this.lblSaldoAtual.DoubleClick += new System.EventHandler(this.lblSaldoAtual_DoubleClick);
             // 
             // cbxOperador
             // 
             this.cbxOperador.FormattingEnabled = true;
             this.cbxOperador.Location = new System.Drawing.Point(73, 51);
             this.cbxOperador.Name = "cbxOperador";
-            this.cbxOperador.Size = new System.Drawing.Size(122, 21);
+            this.cbxOperador.Size = new System.Drawing.Size(186, 21);
             this.cbxOperador.TabIndex = 3;
             this.cbxOperador.SelectedIndexChanged += new System.EventHandler(this.cbxOperador_SelectedIndexChanged);
             // 
@@ -118,7 +120,7 @@
             this.tbDinheiro.MaxLength = 10;
             this.tbDinheiro.Name = "tbDinheiro";
             this.tbDinheiro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbDinheiro.Size = new System.Drawing.Size(122, 20);
+            this.tbDinheiro.Size = new System.Drawing.Size(186, 20);
             this.tbDinheiro.TabIndex = 8;
             this.tbDinheiro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDinheiro_KeyPress);
             this.tbDinheiro.Leave += new System.EventHandler(this.tbDinheiro_Leave);
@@ -137,7 +139,7 @@
             this.cbxCheckout.FormattingEnabled = true;
             this.cbxCheckout.Location = new System.Drawing.Point(73, 23);
             this.cbxCheckout.Name = "cbxCheckout";
-            this.cbxCheckout.Size = new System.Drawing.Size(122, 21);
+            this.cbxCheckout.Size = new System.Drawing.Size(186, 21);
             this.cbxCheckout.TabIndex = 10;
             this.cbxCheckout.SelectedIndexChanged += new System.EventHandler(this.cbxCheckout_SelectedIndexChanged);
             // 
@@ -157,7 +159,7 @@
             this.tbCartao.MaxLength = 10;
             this.tbCartao.Name = "tbCartao";
             this.tbCartao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbCartao.Size = new System.Drawing.Size(122, 20);
+            this.tbCartao.Size = new System.Drawing.Size(186, 20);
             this.tbCartao.TabIndex = 12;
             this.tbCartao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCartao_KeyPress);
             this.tbCartao.Leave += new System.EventHandler(this.tbCartao_Leave);
@@ -175,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(225, 416);
+            this.ClientSize = new System.Drawing.Size(289, 416);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.gbxCaixa);
             this.Name = "frmConfCaixa";

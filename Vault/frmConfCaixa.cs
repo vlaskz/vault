@@ -17,13 +17,13 @@ namespace Vault
                                                                                                     //provavelmente inserir uma comboBox, e alterar o titulo da gbox
                                                                                                     //conforme o checkout e o operador.
 
-        public void carregaDados(ComboBox op,ComboBox chkOut)
+        public void carregaDados()
         {
             DatFileController dc = new DatFileController(); //inicializa a classe que manipula os  dados.
             for (int i = 0; i < dc.read(Config.operador).Count; i++)//carrega operadores de caixa para o combobox
-                op.Items.Add(dc.read(Config.operador)[i]);
+                cbxOperador.Items.Add(dc.read(Config.operador)[i]);
             for (int i = 0; i < dc.read(Config.checkout).Count; i++)//carrega checkouts de caixa para o combobox
-                chkOut.Items.Add(dc.read(Config.checkout)[i]);
+                cbxCheckout.Items.Add(dc.read(Config.checkout)[i]);
 
           
         }
@@ -33,22 +33,20 @@ namespace Vault
         private void frmConfCaixa_Load(object sender, EventArgs e)
         {
             DatFileController dc = new DatFileController();
-            carregaDados(cbxOperador, cbxCheckout);
-
-
-            
+            carregaDados();
 
         }
 
         private void tbSalAt0_Leave(object sender, EventArgs e)
         {
-            tbFormat(tbSaldoAtual);
+            tbSaldoAtual.Enabled = false;
+            formatTextBox(tbSaldoAtual);
         }
 
-        private void tbFormat(TextBox tb)
+        private void formatTextBox(TextBox tb)
         {
             tb.MaxLength = 10;
-            tb.Text = tb.Text.PadRight(8);
+         //   tb.Text = tb.Text.PadRight(8);
         }
 
         private void updateGbxCaixa()
@@ -60,10 +58,10 @@ namespace Vault
 
         private void tbSalAt0_KeyPress(object sender, KeyPressEventArgs e)
         {
-            tbValidate(e);
+             validateTextBox(e);
         }
 
-        private static void tbValidate(KeyPressEventArgs e)
+        private static void validateTextBox(KeyPressEventArgs e)
         {
             if (!char.IsNumber(e.KeyChar) && !char.IsPunctuation(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
@@ -102,22 +100,33 @@ namespace Vault
 
         private void tbDinheiro_Leave(object sender, EventArgs e)
         {
-            tbFormat(tbDinheiro);
+            formatTextBox(tbDinheiro);
         }
 
         private void tbDinheiro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            tbValidate(e);
+            validateTextBox(e);
         }
 
         private void tbCartao_Leave(object sender, EventArgs e)
         {
-            tbFormat(tbCartao);
+            formatTextBox(tbCartao);
         }
 
         private void tbCartao_KeyPress(object sender, KeyPressEventArgs e)
         {
-            tbValidate(e);
+            validateTextBox(e);
+        }
+
+        private void lblSaldoAtual_DoubleClick(object sender, EventArgs e)
+        {
+            tbSaldoAtual.Enabled = true;
+
+        }
+
+        private void tbSaldoAtual_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
