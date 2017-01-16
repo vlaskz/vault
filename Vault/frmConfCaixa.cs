@@ -68,7 +68,10 @@ namespace Vault
 
         private static void validateTextBox(KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar) && e.KeyChar !=',' && e.KeyChar != (char)Keys.Back)
+            if (!char.IsNumber(e.KeyChar) &&
+                e.KeyChar !=',' &&
+                e.KeyChar != (char)Keys.Back &&
+                e.KeyChar !='-')
             {
                 e.Handled = true;
             }
