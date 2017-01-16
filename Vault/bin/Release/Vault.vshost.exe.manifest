@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vault.exe" size="17368">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vault.exe" size="17880">
       <assemblyIdentity name="Vault" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Rf+CbvDZw6EM/JkPcftWl3vVdbZHvYfNBL7oP50Cv1Y=</dsig:DigestValue>
+        <dsig:DigestValue>lu7r+0YatMXct5A4TM/gYi3F1uEqO48jNrnYiTuF8Qg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

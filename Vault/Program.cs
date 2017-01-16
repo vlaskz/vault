@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Vault
@@ -17,7 +13,9 @@ namespace Vault
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            new Config().CreateDatabase();
             new frmInicio().ShowDialog();
+
             
 
         }
