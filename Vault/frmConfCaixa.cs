@@ -17,7 +17,6 @@ namespace Vault
                                                                                                     trocarem de checkout.
                                                                                                     provavelmente inserir uma comboBox, e alterar o titulo da gbox
                                                                                                     conforme o checkout e o operador.*/
-
         public void carregaDados()
         {
             DatFileController dc = new DatFileController(); //inicializa a classe que manipula os  dados.
@@ -127,6 +126,57 @@ namespace Vault
         private void tbSaldoAtual_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void tbNP_Leave(object sender, EventArgs e)
+        {
+            formatTextBox(tbNP);
+
+        }
+
+        private void tbNP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
+
+        private void tbDebAuto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
+
+        private void tbDebAuto_Leave(object sender, EventArgs e)
+        {
+            formatTextBox(tbDebAuto);
+        }
+
+        private void tbCheque_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
+
+        private void tbCheque_Leave(object sender, EventArgs e)
+        {
+            formatTextBox(tbCheque);
+        }
+
+        private void tbBoleto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
+
+        private void tbBoleto_Leave(object sender, EventArgs e)
+        {
+            formatTextBox(tbBoleto);
+        }
+
+        private void tbDesconto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
+
+        private void tbDesconto_Leave(object sender, EventArgs e)
+        {
+            formatTextBox(tbDesconto);
         }
     }
 }

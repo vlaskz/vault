@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.gbxCaixa = new System.Windows.Forms.GroupBox();
+            this.tbDesconto = new System.Windows.Forms.TextBox();
+            this.lblDesconto = new System.Windows.Forms.Label();
+            this.tbBoleto = new System.Windows.Forms.TextBox();
+            this.lblBoleto = new System.Windows.Forms.Label();
+            this.tbCheque = new System.Windows.Forms.TextBox();
+            this.lblCheque = new System.Windows.Forms.Label();
+            this.tbDebAuto = new System.Windows.Forms.TextBox();
+            this.lblDebito = new System.Windows.Forms.Label();
+            this.tbNP = new System.Windows.Forms.TextBox();
+            this.lblNP = new System.Windows.Forms.Label();
+            this.tbCartao = new System.Windows.Forms.TextBox();
+            this.lblCartao = new System.Windows.Forms.Label();
+            this.cbxCheckout = new System.Windows.Forms.ComboBox();
+            this.lblCheckout = new System.Windows.Forms.Label();
+            this.tbDinheiro = new System.Windows.Forms.TextBox();
+            this.lblDinheiro = new System.Windows.Forms.Label();
             this.tbSaldoAtual = new System.Windows.Forms.TextBox();
             this.lblSaldoAtual = new System.Windows.Forms.Label();
             this.cbxOperador = new System.Windows.Forms.ComboBox();
             this.lblOperador = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.tbDinheiro = new System.Windows.Forms.TextBox();
-            this.lblDinheiro = new System.Windows.Forms.Label();
-            this.cbxCheckout = new System.Windows.Forms.ComboBox();
-            this.lblCheckout = new System.Windows.Forms.Label();
-            this.tbCartao = new System.Windows.Forms.TextBox();
-            this.lblCartao = new System.Windows.Forms.Label();
-            this.tbNP = new System.Windows.Forms.TextBox();
-            this.lblNP = new System.Windows.Forms.Label();
-            this.tbDebAuto = new System.Windows.Forms.TextBox();
-            this.lblDebito = new System.Windows.Forms.Label();
-            this.tbCheque = new System.Windows.Forms.TextBox();
-            this.lblCheque = new System.Windows.Forms.Label();
-            this.tbBoleto = new System.Windows.Forms.TextBox();
-            this.lblBoleto = new System.Windows.Forms.Label();
-            this.tbDesconto = new System.Windows.Forms.TextBox();
-            this.lblDesconto = new System.Windows.Forms.Label();
             this.gbxCaixa.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,6 +82,165 @@
             this.gbxCaixa.TabStop = false;
             this.gbxCaixa.Text = "Caixa";
             this.gbxCaixa.Enter += new System.EventHandler(this.gbxCaixa_Enter);
+            // 
+            // tbDesconto
+            // 
+            this.tbDesconto.Location = new System.Drawing.Point(73, 207);
+            this.tbDesconto.MaxLength = 10;
+            this.tbDesconto.Name = "tbDesconto";
+            this.tbDesconto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbDesconto.Size = new System.Drawing.Size(130, 20);
+            this.tbDesconto.TabIndex = 22;
+            this.tbDesconto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDesconto_KeyPress);
+            this.tbDesconto.Leave += new System.EventHandler(this.tbDesconto_Leave);
+            // 
+            // lblDesconto
+            // 
+            this.lblDesconto.AutoSize = true;
+            this.lblDesconto.Location = new System.Drawing.Point(7, 210);
+            this.lblDesconto.Name = "lblDesconto";
+            this.lblDesconto.Size = new System.Drawing.Size(53, 13);
+            this.lblDesconto.TabIndex = 21;
+            this.lblDesconto.Text = "Desconto";
+            // 
+            // tbBoleto
+            // 
+            this.tbBoleto.Location = new System.Drawing.Point(73, 186);
+            this.tbBoleto.MaxLength = 10;
+            this.tbBoleto.Name = "tbBoleto";
+            this.tbBoleto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbBoleto.Size = new System.Drawing.Size(130, 20);
+            this.tbBoleto.TabIndex = 20;
+            this.tbBoleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbBoleto_KeyPress);
+            this.tbBoleto.Leave += new System.EventHandler(this.tbBoleto_Leave);
+            // 
+            // lblBoleto
+            // 
+            this.lblBoleto.AutoSize = true;
+            this.lblBoleto.Location = new System.Drawing.Point(7, 189);
+            this.lblBoleto.Name = "lblBoleto";
+            this.lblBoleto.Size = new System.Drawing.Size(37, 13);
+            this.lblBoleto.TabIndex = 19;
+            this.lblBoleto.Text = "Boleto";
+            // 
+            // tbCheque
+            // 
+            this.tbCheque.Location = new System.Drawing.Point(73, 165);
+            this.tbCheque.MaxLength = 10;
+            this.tbCheque.Name = "tbCheque";
+            this.tbCheque.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbCheque.Size = new System.Drawing.Size(130, 20);
+            this.tbCheque.TabIndex = 18;
+            this.tbCheque.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCheque_KeyPress);
+            this.tbCheque.Leave += new System.EventHandler(this.tbCheque_Leave);
+            // 
+            // lblCheque
+            // 
+            this.lblCheque.AutoSize = true;
+            this.lblCheque.Location = new System.Drawing.Point(7, 168);
+            this.lblCheque.Name = "lblCheque";
+            this.lblCheque.Size = new System.Drawing.Size(44, 13);
+            this.lblCheque.TabIndex = 17;
+            this.lblCheque.Text = "Cheque";
+            // 
+            // tbDebAuto
+            // 
+            this.tbDebAuto.Location = new System.Drawing.Point(73, 144);
+            this.tbDebAuto.MaxLength = 10;
+            this.tbDebAuto.Name = "tbDebAuto";
+            this.tbDebAuto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbDebAuto.Size = new System.Drawing.Size(130, 20);
+            this.tbDebAuto.TabIndex = 16;
+            this.tbDebAuto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDebAuto_KeyPress);
+            this.tbDebAuto.Leave += new System.EventHandler(this.tbDebAuto_Leave);
+            // 
+            // lblDebito
+            // 
+            this.lblDebito.AutoSize = true;
+            this.lblDebito.Location = new System.Drawing.Point(7, 147);
+            this.lblDebito.Name = "lblDebito";
+            this.lblDebito.Size = new System.Drawing.Size(58, 13);
+            this.lblDebito.TabIndex = 15;
+            this.lblDebito.Text = "Déb. Auto.";
+            // 
+            // tbNP
+            // 
+            this.tbNP.Location = new System.Drawing.Point(73, 122);
+            this.tbNP.MaxLength = 10;
+            this.tbNP.Name = "tbNP";
+            this.tbNP.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbNP.Size = new System.Drawing.Size(130, 20);
+            this.tbNP.TabIndex = 14;
+            this.tbNP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNP_KeyPress);
+            this.tbNP.Leave += new System.EventHandler(this.tbNP_Leave);
+            // 
+            // lblNP
+            // 
+            this.lblNP.AutoSize = true;
+            this.lblNP.Location = new System.Drawing.Point(7, 125);
+            this.lblNP.Name = "lblNP";
+            this.lblNP.Size = new System.Drawing.Size(22, 13);
+            this.lblNP.TabIndex = 13;
+            this.lblNP.Text = "NP";
+            // 
+            // tbCartao
+            // 
+            this.tbCartao.Location = new System.Drawing.Point(73, 100);
+            this.tbCartao.MaxLength = 10;
+            this.tbCartao.Name = "tbCartao";
+            this.tbCartao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbCartao.Size = new System.Drawing.Size(130, 20);
+            this.tbCartao.TabIndex = 12;
+            this.tbCartao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCartao_KeyPress);
+            this.tbCartao.Leave += new System.EventHandler(this.tbCartao_Leave);
+            // 
+            // lblCartao
+            // 
+            this.lblCartao.AutoSize = true;
+            this.lblCartao.Location = new System.Drawing.Point(7, 103);
+            this.lblCartao.Name = "lblCartao";
+            this.lblCartao.Size = new System.Drawing.Size(38, 13);
+            this.lblCartao.TabIndex = 11;
+            this.lblCartao.Text = "Cartão";
+            // 
+            // cbxCheckout
+            // 
+            this.cbxCheckout.FormattingEnabled = true;
+            this.cbxCheckout.Location = new System.Drawing.Point(73, 14);
+            this.cbxCheckout.Name = "cbxCheckout";
+            this.cbxCheckout.Size = new System.Drawing.Size(130, 21);
+            this.cbxCheckout.TabIndex = 10;
+            this.cbxCheckout.SelectedIndexChanged += new System.EventHandler(this.cbxCheckout_SelectedIndexChanged);
+            // 
+            // lblCheckout
+            // 
+            this.lblCheckout.AutoSize = true;
+            this.lblCheckout.Location = new System.Drawing.Point(7, 17);
+            this.lblCheckout.Name = "lblCheckout";
+            this.lblCheckout.Size = new System.Drawing.Size(53, 13);
+            this.lblCheckout.TabIndex = 9;
+            this.lblCheckout.Text = "Checkout";
+            this.lblCheckout.DoubleClick += new System.EventHandler(this.lblCheckout_DoubleClick);
+            // 
+            // tbDinheiro
+            // 
+            this.tbDinheiro.Location = new System.Drawing.Point(73, 79);
+            this.tbDinheiro.MaxLength = 10;
+            this.tbDinheiro.Name = "tbDinheiro";
+            this.tbDinheiro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbDinheiro.Size = new System.Drawing.Size(130, 20);
+            this.tbDinheiro.TabIndex = 8;
+            this.tbDinheiro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDinheiro_KeyPress);
+            this.tbDinheiro.Leave += new System.EventHandler(this.tbDinheiro_Leave);
+            // 
+            // lblDinheiro
+            // 
+            this.lblDinheiro.AutoSize = true;
+            this.lblDinheiro.Location = new System.Drawing.Point(7, 82);
+            this.lblDinheiro.Name = "lblDinheiro";
+            this.lblDinheiro.Size = new System.Drawing.Size(46, 13);
+            this.lblDinheiro.TabIndex = 7;
+            this.lblDinheiro.Text = "Dinheiro";
             // 
             // tbSaldoAtual
             // 
@@ -133,155 +292,6 @@
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Caixa";
-            // 
-            // tbDinheiro
-            // 
-            this.tbDinheiro.Location = new System.Drawing.Point(73, 79);
-            this.tbDinheiro.MaxLength = 10;
-            this.tbDinheiro.Name = "tbDinheiro";
-            this.tbDinheiro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbDinheiro.Size = new System.Drawing.Size(130, 20);
-            this.tbDinheiro.TabIndex = 8;
-            this.tbDinheiro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDinheiro_KeyPress);
-            this.tbDinheiro.Leave += new System.EventHandler(this.tbDinheiro_Leave);
-            // 
-            // lblDinheiro
-            // 
-            this.lblDinheiro.AutoSize = true;
-            this.lblDinheiro.Location = new System.Drawing.Point(7, 82);
-            this.lblDinheiro.Name = "lblDinheiro";
-            this.lblDinheiro.Size = new System.Drawing.Size(46, 13);
-            this.lblDinheiro.TabIndex = 7;
-            this.lblDinheiro.Text = "Dinheiro";
-            // 
-            // cbxCheckout
-            // 
-            this.cbxCheckout.FormattingEnabled = true;
-            this.cbxCheckout.Location = new System.Drawing.Point(73, 14);
-            this.cbxCheckout.Name = "cbxCheckout";
-            this.cbxCheckout.Size = new System.Drawing.Size(130, 21);
-            this.cbxCheckout.TabIndex = 10;
-            this.cbxCheckout.SelectedIndexChanged += new System.EventHandler(this.cbxCheckout_SelectedIndexChanged);
-            // 
-            // lblCheckout
-            // 
-            this.lblCheckout.AutoSize = true;
-            this.lblCheckout.Location = new System.Drawing.Point(7, 17);
-            this.lblCheckout.Name = "lblCheckout";
-            this.lblCheckout.Size = new System.Drawing.Size(53, 13);
-            this.lblCheckout.TabIndex = 9;
-            this.lblCheckout.Text = "Checkout";
-            this.lblCheckout.DoubleClick += new System.EventHandler(this.lblCheckout_DoubleClick);
-            // 
-            // tbCartao
-            // 
-            this.tbCartao.Location = new System.Drawing.Point(73, 100);
-            this.tbCartao.MaxLength = 10;
-            this.tbCartao.Name = "tbCartao";
-            this.tbCartao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbCartao.Size = new System.Drawing.Size(130, 20);
-            this.tbCartao.TabIndex = 12;
-            this.tbCartao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCartao_KeyPress);
-            this.tbCartao.Leave += new System.EventHandler(this.tbCartao_Leave);
-            // 
-            // lblCartao
-            // 
-            this.lblCartao.AutoSize = true;
-            this.lblCartao.Location = new System.Drawing.Point(7, 103);
-            this.lblCartao.Name = "lblCartao";
-            this.lblCartao.Size = new System.Drawing.Size(38, 13);
-            this.lblCartao.TabIndex = 11;
-            this.lblCartao.Text = "Cartão";
-            // 
-            // tbNP
-            // 
-            this.tbNP.Location = new System.Drawing.Point(73, 122);
-            this.tbNP.MaxLength = 10;
-            this.tbNP.Name = "tbNP";
-            this.tbNP.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbNP.Size = new System.Drawing.Size(130, 20);
-            this.tbNP.TabIndex = 14;
-            // 
-            // lblNP
-            // 
-            this.lblNP.AutoSize = true;
-            this.lblNP.Location = new System.Drawing.Point(7, 125);
-            this.lblNP.Name = "lblNP";
-            this.lblNP.Size = new System.Drawing.Size(22, 13);
-            this.lblNP.TabIndex = 13;
-            this.lblNP.Text = "NP";
-            // 
-            // tbDebAuto
-            // 
-            this.tbDebAuto.Location = new System.Drawing.Point(73, 144);
-            this.tbDebAuto.MaxLength = 10;
-            this.tbDebAuto.Name = "tbDebAuto";
-            this.tbDebAuto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbDebAuto.Size = new System.Drawing.Size(130, 20);
-            this.tbDebAuto.TabIndex = 16;
-            // 
-            // lblDebito
-            // 
-            this.lblDebito.AutoSize = true;
-            this.lblDebito.Location = new System.Drawing.Point(7, 147);
-            this.lblDebito.Name = "lblDebito";
-            this.lblDebito.Size = new System.Drawing.Size(58, 13);
-            this.lblDebito.TabIndex = 15;
-            this.lblDebito.Text = "Déb. Auto.";
-            // 
-            // tbCheque
-            // 
-            this.tbCheque.Location = new System.Drawing.Point(73, 165);
-            this.tbCheque.MaxLength = 10;
-            this.tbCheque.Name = "tbCheque";
-            this.tbCheque.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbCheque.Size = new System.Drawing.Size(130, 20);
-            this.tbCheque.TabIndex = 18;
-            // 
-            // lblCheque
-            // 
-            this.lblCheque.AutoSize = true;
-            this.lblCheque.Location = new System.Drawing.Point(7, 168);
-            this.lblCheque.Name = "lblCheque";
-            this.lblCheque.Size = new System.Drawing.Size(44, 13);
-            this.lblCheque.TabIndex = 17;
-            this.lblCheque.Text = "Cheque";
-            // 
-            // tbBoleto
-            // 
-            this.tbBoleto.Location = new System.Drawing.Point(73, 186);
-            this.tbBoleto.MaxLength = 10;
-            this.tbBoleto.Name = "tbBoleto";
-            this.tbBoleto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbBoleto.Size = new System.Drawing.Size(130, 20);
-            this.tbBoleto.TabIndex = 20;
-            // 
-            // lblBoleto
-            // 
-            this.lblBoleto.AutoSize = true;
-            this.lblBoleto.Location = new System.Drawing.Point(7, 189);
-            this.lblBoleto.Name = "lblBoleto";
-            this.lblBoleto.Size = new System.Drawing.Size(37, 13);
-            this.lblBoleto.TabIndex = 19;
-            this.lblBoleto.Text = "Boleto";
-            // 
-            // tbDesconto
-            // 
-            this.tbDesconto.Location = new System.Drawing.Point(73, 207);
-            this.tbDesconto.MaxLength = 10;
-            this.tbDesconto.Name = "tbDesconto";
-            this.tbDesconto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbDesconto.Size = new System.Drawing.Size(130, 20);
-            this.tbDesconto.TabIndex = 22;
-            // 
-            // lblDesconto
-            // 
-            this.lblDesconto.AutoSize = true;
-            this.lblDesconto.Location = new System.Drawing.Point(7, 210);
-            this.lblDesconto.Name = "lblDesconto";
-            this.lblDesconto.Size = new System.Drawing.Size(53, 13);
-            this.lblDesconto.TabIndex = 21;
-            this.lblDesconto.Text = "Desconto";
             // 
             // frmConfCaixa
             // 
