@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfCaixa));
             this.gbxCaixa = new System.Windows.Forms.GroupBox();
             this.tbDiferenca = new System.Windows.Forms.TextBox();
@@ -73,7 +74,11 @@
             this.cbxOperador = new System.Windows.Forms.ComboBox();
             this.lblOperador = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tslDataHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.gbxCaixa.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxCaixa
@@ -122,7 +127,7 @@
             this.gbxCaixa.Controls.Add(this.lblOperador);
             this.gbxCaixa.Location = new System.Drawing.Point(5, 4);
             this.gbxCaixa.Name = "gbxCaixa";
-            this.gbxCaixa.Size = new System.Drawing.Size(282, 481);
+            this.gbxCaixa.Size = new System.Drawing.Size(282, 478);
             this.gbxCaixa.TabIndex = 0;
             this.gbxCaixa.TabStop = false;
             this.gbxCaixa.Text = "Caixa";
@@ -556,11 +561,28 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Caixa";
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tslDataHora});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 489);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(299, 22);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // tslDataHora
+            // 
+            this.tslDataHora.Name = "tslDataHora";
+            this.tslDataHora.Size = new System.Drawing.Size(179, 17);
+            this.tslDataHora.Text = "Desenvolvido Por Sam Velasquez";
+            // 
             // frmConfCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 497);
+            this.ClientSize = new System.Drawing.Size(299, 511);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.gbxCaixa);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -570,7 +592,10 @@
             this.Load += new System.EventHandler(this.frmConfCaixa_Load);
             this.gbxCaixa.ResumeLayout(false);
             this.gbxCaixa.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -620,5 +645,8 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox tbExtra;
         private System.Windows.Forms.Label lblExtra;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel tslDataHora;
     }
 }
