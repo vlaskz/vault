@@ -21,8 +21,10 @@ namespace Vault
         public void carregaDados()
         {
             DatFileController dc = new DatFileController(); //inicializa a classe que manipula os  dados.
+
             for (int i = 0; i < dc.read(Config.operador).Count; i++)//carrega operadores de caixa para o combobox
                 cbxOperador.Items.Add(dc.read(Config.operador)[i]);
+
             for (int i = 0; i < dc.read(Config.checkout).Count; i++)//carrega checkouts de caixa para o combobox
                 cbxCheckout.Items.Add(dc.read(Config.checkout)[i]);
 
