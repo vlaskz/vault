@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Collections;
-using System.IO;
+
 
 namespace Vault
 {
@@ -32,14 +31,17 @@ namespace Vault
         
         private void frmConfCaixa_Load(object sender, EventArgs e)
         {
+            new ToolTip().SetToolTip(lblCheckout,"Duplo clique no nome do campo para desbloquear");
+            new ToolTip().SetToolTip(lblOperador, "Duplo clique no nome do campo para desbloquear");
+            new ToolTip().SetToolTip(lblSaldoAtual, "Duplo clique no nome do campo para desbloquear");
             DatFileController dc = new DatFileController();
             carregaDados();
 
         }
 
-        private void tbSalAt0_Leave(object sender, EventArgs e)
+        private void tbSaldoAtual_Leave(object sender, EventArgs e)
         {
-            tbSaldoAtual.Enabled = false;
+            tbSaldoAtual.ReadOnly=true;
             formatTextBox(tbSaldoAtual);
         }
 
@@ -55,7 +57,7 @@ namespace Vault
             gbxCaixa.Text = "Caixa:" + cbxCheckout.SelectedItem.ToString() + "." + cbxOperador.SelectedItem.ToString();
         }
         
-        private void tbSalAt0_KeyPress(object sender, KeyPressEventArgs e)
+        private void tbSaldoAtual_KeyPress(object sender, KeyPressEventArgs e)
         {
              validateTextBox(e);
         }
@@ -119,14 +121,11 @@ namespace Vault
 
         private void lblSaldoAtual_DoubleClick(object sender, EventArgs e)
         {
-            tbSaldoAtual.Enabled = true;
+            tbSaldoAtual.ReadOnly = false;
 
         }
 
-        private void tbSaldoAtual_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
+      
 
         private void tbNP_Leave(object sender, EventArgs e)
         {
