@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfCaixa));
             this.gbxCaixa = new System.Windows.Forms.GroupBox();
+            this.tbSaldoAnt = new System.Windows.Forms.TextBox();
+            this.lblSaldoAnt = new System.Windows.Forms.Label();
+            this.tbCredCli = new System.Windows.Forms.TextBox();
+            this.lblCredCli = new System.Windows.Forms.Label();
             this.tbDiferenca = new System.Windows.Forms.TextBox();
             this.lblDirefenca = new System.Windows.Forms.Label();
             this.tbTotalCupom = new System.Windows.Forms.TextBox();
@@ -77,10 +81,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tslDataHora = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tbCredCli = new System.Windows.Forms.TextBox();
-            this.lblCredCli = new System.Windows.Forms.Label();
-            this.tbSaldoAnt = new System.Windows.Forms.TextBox();
-            this.lblSaldoAnt = new System.Windows.Forms.Label();
             this.gbxCaixa.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -140,6 +140,46 @@
             this.gbxCaixa.TabStop = false;
             this.gbxCaixa.Text = "Caixa";
             this.gbxCaixa.Enter += new System.EventHandler(this.gbxCaixa_Enter);
+            // 
+            // tbSaldoAnt
+            // 
+            this.tbSaldoAnt.Location = new System.Drawing.Point(117, 408);
+            this.tbSaldoAnt.MaxLength = 10;
+            this.tbSaldoAnt.Name = "tbSaldoAnt";
+            this.tbSaldoAnt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbSaldoAnt.Size = new System.Drawing.Size(159, 20);
+            this.tbSaldoAnt.TabIndex = 42;
+            this.tbSaldoAnt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSaldoAnt_KeyPress);
+            this.tbSaldoAnt.Leave += new System.EventHandler(this.tbSaldoAnt_Leave);
+            // 
+            // lblSaldoAnt
+            // 
+            this.lblSaldoAnt.AutoSize = true;
+            this.lblSaldoAnt.Location = new System.Drawing.Point(6, 411);
+            this.lblSaldoAnt.Name = "lblSaldoAnt";
+            this.lblSaldoAnt.Size = new System.Drawing.Size(73, 13);
+            this.lblSaldoAnt.TabIndex = 49;
+            this.lblSaldoAnt.Text = "Saldo Anterior";
+            // 
+            // tbCredCli
+            // 
+            this.tbCredCli.Location = new System.Drawing.Point(117, 387);
+            this.tbCredCli.MaxLength = 10;
+            this.tbCredCli.Name = "tbCredCli";
+            this.tbCredCli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbCredCli.Size = new System.Drawing.Size(159, 20);
+            this.tbCredCli.TabIndex = 40;
+            this.tbCredCli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCredCli_KeyPress);
+            this.tbCredCli.Leave += new System.EventHandler(this.tbCredCli_Leave);
+            // 
+            // lblCredCli
+            // 
+            this.lblCredCli.AutoSize = true;
+            this.lblCredCli.Location = new System.Drawing.Point(6, 390);
+            this.lblCredCli.Name = "lblCredCli";
+            this.lblCredCli.Size = new System.Drawing.Size(75, 13);
+            this.lblCredCli.TabIndex = 47;
+            this.lblCredCli.Text = "Crédito Cliente";
             // 
             // tbDiferenca
             // 
@@ -205,7 +245,7 @@
             // 
             // tbExtra
             // 
-            this.tbExtra.Location = new System.Drawing.Point(117, 423);
+            this.tbExtra.Location = new System.Drawing.Point(117, 429);
             this.tbExtra.MaxLength = 10;
             this.tbExtra.Name = "tbExtra";
             this.tbExtra.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -217,7 +257,7 @@
             // lblExtra
             // 
             this.lblExtra.AutoSize = true;
-            this.lblExtra.Location = new System.Drawing.Point(6, 426);
+            this.lblExtra.Location = new System.Drawing.Point(6, 432);
             this.lblExtra.Name = "lblExtra";
             this.lblExtra.Size = new System.Drawing.Size(31, 13);
             this.lblExtra.TabIndex = 39;
@@ -225,7 +265,7 @@
             // 
             // tbServelar
             // 
-            this.tbServelar.Location = new System.Drawing.Point(117, 360);
+            this.tbServelar.Location = new System.Drawing.Point(117, 366);
             this.tbServelar.MaxLength = 10;
             this.tbServelar.Name = "tbServelar";
             this.tbServelar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -237,7 +277,7 @@
             // lblServelar
             // 
             this.lblServelar.AutoSize = true;
-            this.lblServelar.Location = new System.Drawing.Point(6, 363);
+            this.lblServelar.Location = new System.Drawing.Point(6, 369);
             this.lblServelar.Name = "lblServelar";
             this.lblServelar.Size = new System.Drawing.Size(55, 13);
             this.lblServelar.TabIndex = 37;
@@ -245,7 +285,7 @@
             // 
             // tbTroco
             // 
-            this.tbTroco.Location = new System.Drawing.Point(117, 339);
+            this.tbTroco.Location = new System.Drawing.Point(117, 345);
             this.tbTroco.MaxLength = 10;
             this.tbTroco.Name = "tbTroco";
             this.tbTroco.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -257,7 +297,7 @@
             // lblTroco
             // 
             this.lblTroco.AutoSize = true;
-            this.lblTroco.Location = new System.Drawing.Point(6, 342);
+            this.lblTroco.Location = new System.Drawing.Point(6, 348);
             this.lblTroco.Name = "lblTroco";
             this.lblTroco.Size = new System.Drawing.Size(35, 13);
             this.lblTroco.TabIndex = 35;
@@ -587,46 +627,6 @@
             this.tslDataHora.Name = "tslDataHora";
             this.tslDataHora.Size = new System.Drawing.Size(179, 17);
             this.tslDataHora.Text = "Desenvolvido Por Sam Velasquez";
-            // 
-            // tbCredCli
-            // 
-            this.tbCredCli.Location = new System.Drawing.Point(117, 381);
-            this.tbCredCli.MaxLength = 10;
-            this.tbCredCli.Name = "tbCredCli";
-            this.tbCredCli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbCredCli.Size = new System.Drawing.Size(159, 20);
-            this.tbCredCli.TabIndex = 40;
-            this.tbCredCli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCredCli_KeyPress);
-            this.tbCredCli.Leave += new System.EventHandler(this.tbCredCli_Leave);
-            // 
-            // lblCredCli
-            // 
-            this.lblCredCli.AutoSize = true;
-            this.lblCredCli.Location = new System.Drawing.Point(6, 384);
-            this.lblCredCli.Name = "lblCredCli";
-            this.lblCredCli.Size = new System.Drawing.Size(75, 13);
-            this.lblCredCli.TabIndex = 47;
-            this.lblCredCli.Text = "Crédito Cliente";
-            // 
-            // tbSaldoAnt
-            // 
-            this.tbSaldoAnt.Location = new System.Drawing.Point(117, 402);
-            this.tbSaldoAnt.MaxLength = 10;
-            this.tbSaldoAnt.Name = "tbSaldoAnt";
-            this.tbSaldoAnt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbSaldoAnt.Size = new System.Drawing.Size(159, 20);
-            this.tbSaldoAnt.TabIndex = 42;
-            this.tbSaldoAnt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSaldoAnt_KeyPress);
-            this.tbSaldoAnt.Leave += new System.EventHandler(this.tbSaldoAnt_Leave);
-            // 
-            // lblSaldoAnt
-            // 
-            this.lblSaldoAnt.AutoSize = true;
-            this.lblSaldoAnt.Location = new System.Drawing.Point(6, 405);
-            this.lblSaldoAnt.Name = "lblSaldoAnt";
-            this.lblSaldoAnt.Size = new System.Drawing.Size(73, 13);
-            this.lblSaldoAnt.TabIndex = 49;
-            this.lblSaldoAnt.Text = "Saldo Anterior";
             // 
             // frmConfCaixa
             // 
