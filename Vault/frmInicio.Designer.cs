@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.label1 = new System.Windows.Forms.Label();
             this.btnConfCaixa = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -35,7 +36,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 24);
+            this.label1.Location = new System.Drawing.Point(9, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 26);
             this.label1.TabIndex = 0;
@@ -44,11 +45,15 @@
             // 
             // btnConfCaixa
             // 
-            this.btnConfCaixa.Location = new System.Drawing.Point(31, 53);
+            this.btnConfCaixa.Image = ((System.Drawing.Image)(resources.GetObject("btnConfCaixa.Image")));
+            this.btnConfCaixa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnConfCaixa.Location = new System.Drawing.Point(12, 39);
             this.btnConfCaixa.Name = "btnConfCaixa";
-            this.btnConfCaixa.Size = new System.Drawing.Size(122, 39);
+            this.btnConfCaixa.Size = new System.Drawing.Size(138, 149);
             this.btnConfCaixa.TabIndex = 1;
             this.btnConfCaixa.Text = "Conferência de Caixa";
+            this.btnConfCaixa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConfCaixa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnConfCaixa.UseVisualStyleBackColor = true;
             this.btnConfCaixa.Click += new System.EventHandler(this.btnConfCaixa_Click);
             // 
@@ -56,9 +61,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(187, 118);
+            this.ClientSize = new System.Drawing.Size(163, 199);
             this.Controls.Add(this.btnConfCaixa);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Vault";

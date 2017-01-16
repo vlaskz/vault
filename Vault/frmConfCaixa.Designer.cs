@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfCaixa));
             this.gbxCaixa = new System.Windows.Forms.GroupBox();
             this.tbDesconto = new System.Windows.Forms.TextBox();
             this.lblDesconto = new System.Windows.Forms.Label();
@@ -300,8 +301,8 @@
             this.ClientSize = new System.Drawing.Size(217, 497);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.gbxCaixa);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConfCaixa";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vault - ConfCaixa";
             this.Load += new System.EventHandler(this.frmConfCaixa_Load);
