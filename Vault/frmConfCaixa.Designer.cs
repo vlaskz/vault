@@ -51,11 +51,35 @@
             this.cbxOperador = new System.Windows.Forms.ComboBox();
             this.lblOperador = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tbDespesa = new System.Windows.Forms.TextBox();
+            this.lblDespesa = new System.Windows.Forms.Label();
+            this.tbBanco = new System.Windows.Forms.TextBox();
+            this.lblBanco = new System.Windows.Forms.Label();
+            this.tbPagMerc = new System.Windows.Forms.TextBox();
+            this.lblPagMerc = new System.Windows.Forms.Label();
+            this.tbCompCred = new System.Windows.Forms.TextBox();
+            this.lblCompCred = new System.Windows.Forms.Label();
+            this.tbDevol = new System.Windows.Forms.TextBox();
+            this.lblDevol = new System.Windows.Forms.Label();
+            this.tbTroco = new System.Windows.Forms.TextBox();
+            this.lblTroco = new System.Windows.Forms.Label();
             this.gbxCaixa.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxCaixa
             // 
+            this.gbxCaixa.Controls.Add(this.tbTroco);
+            this.gbxCaixa.Controls.Add(this.lblTroco);
+            this.gbxCaixa.Controls.Add(this.tbDevol);
+            this.gbxCaixa.Controls.Add(this.lblDevol);
+            this.gbxCaixa.Controls.Add(this.tbCompCred);
+            this.gbxCaixa.Controls.Add(this.lblCompCred);
+            this.gbxCaixa.Controls.Add(this.tbPagMerc);
+            this.gbxCaixa.Controls.Add(this.lblPagMerc);
+            this.gbxCaixa.Controls.Add(this.lblBanco);
+            this.gbxCaixa.Controls.Add(this.tbBanco);
+            this.gbxCaixa.Controls.Add(this.tbDespesa);
+            this.gbxCaixa.Controls.Add(this.lblDespesa);
             this.gbxCaixa.Controls.Add(this.tbDesconto);
             this.gbxCaixa.Controls.Add(this.lblDesconto);
             this.gbxCaixa.Controls.Add(this.tbBoleto);
@@ -294,6 +318,114 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Caixa";
             // 
+            // tbDespesa
+            // 
+            this.tbDespesa.Location = new System.Drawing.Point(73, 228);
+            this.tbDespesa.MaxLength = 10;
+            this.tbDespesa.Name = "tbDespesa";
+            this.tbDespesa.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbDespesa.Size = new System.Drawing.Size(130, 20);
+            this.tbDespesa.TabIndex = 24;
+            // 
+            // lblDespesa
+            // 
+            this.lblDespesa.AutoSize = true;
+            this.lblDespesa.Location = new System.Drawing.Point(7, 231);
+            this.lblDespesa.Name = "lblDespesa";
+            this.lblDespesa.Size = new System.Drawing.Size(49, 13);
+            this.lblDespesa.TabIndex = 23;
+            this.lblDespesa.Text = "Despesa";
+            // 
+            // tbBanco
+            // 
+            this.tbBanco.Location = new System.Drawing.Point(73, 249);
+            this.tbBanco.MaxLength = 10;
+            this.tbBanco.Name = "tbBanco";
+            this.tbBanco.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbBanco.Size = new System.Drawing.Size(130, 20);
+            this.tbBanco.TabIndex = 26;
+            // 
+            // lblBanco
+            // 
+            this.lblBanco.AutoSize = true;
+            this.lblBanco.Location = new System.Drawing.Point(7, 252);
+            this.lblBanco.Name = "lblBanco";
+            this.lblBanco.Size = new System.Drawing.Size(38, 13);
+            this.lblBanco.TabIndex = 27;
+            this.lblBanco.Text = "Banco";
+            // 
+            // tbPagMerc
+            // 
+            this.tbPagMerc.Location = new System.Drawing.Point(73, 270);
+            this.tbPagMerc.MaxLength = 10;
+            this.tbPagMerc.Name = "tbPagMerc";
+            this.tbPagMerc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbPagMerc.Size = new System.Drawing.Size(130, 20);
+            this.tbPagMerc.TabIndex = 30;
+            // 
+            // lblPagMerc
+            // 
+            this.lblPagMerc.AutoSize = true;
+            this.lblPagMerc.Location = new System.Drawing.Point(7, 273);
+            this.lblPagMerc.Name = "lblPagMerc";
+            this.lblPagMerc.Size = new System.Drawing.Size(56, 13);
+            this.lblPagMerc.TabIndex = 29;
+            this.lblPagMerc.Text = "Pag.Merc.";
+            // 
+            // tbCompCred
+            // 
+            this.tbCompCred.Location = new System.Drawing.Point(73, 291);
+            this.tbCompCred.MaxLength = 10;
+            this.tbCompCred.Name = "tbCompCred";
+            this.tbCompCred.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbCompCred.Size = new System.Drawing.Size(130, 20);
+            this.tbCompCred.TabIndex = 32;
+            // 
+            // lblCompCred
+            // 
+            this.lblCompCred.AutoSize = true;
+            this.lblCompCred.Location = new System.Drawing.Point(7, 294);
+            this.lblCompCred.Name = "lblCompCred";
+            this.lblCompCred.Size = new System.Drawing.Size(62, 13);
+            this.lblCompCred.TabIndex = 31;
+            this.lblCompCred.Text = "Comp. Cred";
+            // 
+            // tbDevol
+            // 
+            this.tbDevol.Location = new System.Drawing.Point(73, 313);
+            this.tbDevol.MaxLength = 10;
+            this.tbDevol.Name = "tbDevol";
+            this.tbDevol.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbDevol.Size = new System.Drawing.Size(130, 20);
+            this.tbDevol.TabIndex = 34;
+            // 
+            // lblDevol
+            // 
+            this.lblDevol.AutoSize = true;
+            this.lblDevol.Location = new System.Drawing.Point(7, 315);
+            this.lblDevol.Name = "lblDevol";
+            this.lblDevol.Size = new System.Drawing.Size(59, 13);
+            this.lblDevol.TabIndex = 33;
+            this.lblDevol.Text = "Devolução";
+            // 
+            // tbTroco
+            // 
+            this.tbTroco.Location = new System.Drawing.Point(73, 334);
+            this.tbTroco.MaxLength = 10;
+            this.tbTroco.Name = "tbTroco";
+            this.tbTroco.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbTroco.Size = new System.Drawing.Size(130, 20);
+            this.tbTroco.TabIndex = 36;
+            // 
+            // lblTroco
+            // 
+            this.lblTroco.AutoSize = true;
+            this.lblTroco.Location = new System.Drawing.Point(7, 337);
+            this.lblTroco.Name = "lblTroco";
+            this.lblTroco.Size = new System.Drawing.Size(35, 13);
+            this.lblTroco.TabIndex = 35;
+            this.lblTroco.Text = "Troco";
+            // 
             // frmConfCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,5 +468,17 @@
         private System.Windows.Forms.Label lblDebito;
         private System.Windows.Forms.TextBox tbNP;
         private System.Windows.Forms.Label lblNP;
+        private System.Windows.Forms.TextBox tbTroco;
+        private System.Windows.Forms.Label lblTroco;
+        private System.Windows.Forms.TextBox tbDevol;
+        private System.Windows.Forms.Label lblDevol;
+        private System.Windows.Forms.TextBox tbCompCred;
+        private System.Windows.Forms.Label lblCompCred;
+        private System.Windows.Forms.TextBox tbPagMerc;
+        private System.Windows.Forms.Label lblPagMerc;
+        private System.Windows.Forms.Label lblBanco;
+        private System.Windows.Forms.TextBox tbBanco;
+        private System.Windows.Forms.TextBox tbDespesa;
+        private System.Windows.Forms.Label lblDespesa;
     }
 }
