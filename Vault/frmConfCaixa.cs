@@ -10,12 +10,13 @@ namespace Vault
         public frmConfCaixa()
         {
             InitializeComponent();
-        }                                                                                           //Ao tornar uma unica instância de dos campos, , trocando somente o numero
-                                              //TODO:                                               //do checkout, precisamos criar uma forma de controlar as alterações.
-                                                                                                    //Levando em consideração o fato de ás vezes os operadores de caixa
-                                                                                                    //trocarem de checkout.
-                                                                                                    //provavelmente inserir uma comboBox, e alterar o titulo da gbox
-                                                                                                    //conforme o checkout e o operador.
+        }                                                                
+                                                                                                    /*Ao tornar uma unica instância de dos campos, , trocando somente o numero
+                                                                                                    do checkout, precisamos criar uma forma de controlar as alterações.
+                                                                                                    Levando em consideração o fato de ás vezes os operadores de caixa
+                                                                                                    trocarem de checkout.
+                                                                                                    provavelmente inserir uma comboBox, e alterar o titulo da gbox
+                                                                                                    conforme o checkout e o operador.*/
 
         public void carregaDados()
         {
@@ -27,9 +28,7 @@ namespace Vault
 
           
         }
-
-
-
+        
         private void frmConfCaixa_Load(object sender, EventArgs e)
         {
             DatFileController dc = new DatFileController();
@@ -54,8 +53,7 @@ namespace Vault
             if(cbxCheckout.SelectedItem!=null&&cbxOperador.SelectedItem!=null)
             gbxCaixa.Text = "Caixa:" + cbxCheckout.SelectedItem.ToString() + "." + cbxOperador.SelectedItem.ToString();
         }
-
-
+        
         private void tbSalAt0_KeyPress(object sender, KeyPressEventArgs e)
         {
              validateTextBox(e);
