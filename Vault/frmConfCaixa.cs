@@ -177,6 +177,96 @@ namespace Vault
         {
             formatTextBox(tbDesconto);
         }
+
+        private void tbDespesa_Leave(object sender, EventArgs e)
+        {
+            formatTextBox((TextBox)(sender));
+        }
+
+        private void tbDespesa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
+
+        private void tbBanco_Leave(object sender, EventArgs e)
+        {
+            formatTextBox((TextBox)(sender));
+        }
+
+        private void tbBanco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
+
+        private void tbPagMerc_Leave(object sender, EventArgs e)
+        {
+            formatTextBox((TextBox)(sender));
+        }
+
+        private void tbPagMerc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
+
+        private void tbCompCred_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
+
+        private void tbCompCred_Leave(object sender, EventArgs e)
+        {
+            formatTextBox((TextBox)(sender));
+        }
+
+        private void tbDevol_Leave(object sender, EventArgs e)
+        {
+            formatTextBox((TextBox)(sender));
+        }
+
+        private void tbDevol_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
+
+        private void tbTroco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
+
+        private void tbTroco_Leave(object sender, EventArgs e)
+        {
+            formatTextBox((TextBox)(sender));
+        }
+
+        private void tbServelar_Leave(object sender, EventArgs e)
+        {
+            formatTextBox((TextBox)(sender));
+        }
+
+        private void tbServelar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
+
+        private void tbExtra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
+
+        private void tbExtra_Leave(object sender, EventArgs e)
+        {
+            formatTextBox((TextBox)(sender));
+        }
+
+        private void tbTotalCupom_Leave(object sender, EventArgs e)
+        {
+            formatTextBox((TextBox)(sender));
+        }
+
+        private void tbTotalCupom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
     }
 }
 

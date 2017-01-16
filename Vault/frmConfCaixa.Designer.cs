@@ -30,6 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfCaixa));
             this.gbxCaixa = new System.Windows.Forms.GroupBox();
+            this.tbDiferenca = new System.Windows.Forms.TextBox();
+            this.lblDirefenca = new System.Windows.Forms.Label();
+            this.tbTotalCupom = new System.Windows.Forms.TextBox();
+            this.lblTotalCupom = new System.Windows.Forms.Label();
+            this.tbTotal = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.tbExtra = new System.Windows.Forms.TextBox();
+            this.lblExtra = new System.Windows.Forms.Label();
             this.tbServelar = new System.Windows.Forms.TextBox();
             this.lblServelar = new System.Windows.Forms.Label();
             this.tbTroco = new System.Windows.Forms.TextBox();
@@ -65,14 +73,6 @@
             this.cbxOperador = new System.Windows.Forms.ComboBox();
             this.lblOperador = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.tbExtra = new System.Windows.Forms.TextBox();
-            this.lblExtra = new System.Windows.Forms.Label();
-            this.tbTotal = new System.Windows.Forms.TextBox();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.tbTotalCupom = new System.Windows.Forms.TextBox();
-            this.lblTotalCupom = new System.Windows.Forms.Label();
-            this.tbDiferenca = new System.Windows.Forms.TextBox();
-            this.lblDirefenca = new System.Windows.Forms.Label();
             this.gbxCaixa.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,6 +128,85 @@
             this.gbxCaixa.Text = "Caixa";
             this.gbxCaixa.Enter += new System.EventHandler(this.gbxCaixa_Enter);
             // 
+            // tbDiferenca
+            // 
+            this.tbDiferenca.Location = new System.Drawing.Point(117, 444);
+            this.tbDiferenca.MaxLength = 10;
+            this.tbDiferenca.Name = "tbDiferenca";
+            this.tbDiferenca.ReadOnly = true;
+            this.tbDiferenca.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbDiferenca.Size = new System.Drawing.Size(159, 20);
+            this.tbDiferenca.TabIndex = 46;
+            // 
+            // lblDirefenca
+            // 
+            this.lblDirefenca.AutoSize = true;
+            this.lblDirefenca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDirefenca.Location = new System.Drawing.Point(6, 447);
+            this.lblDirefenca.Name = "lblDirefenca";
+            this.lblDirefenca.Size = new System.Drawing.Size(62, 13);
+            this.lblDirefenca.TabIndex = 45;
+            this.lblDirefenca.Text = "Diferença";
+            // 
+            // tbTotalCupom
+            // 
+            this.tbTotalCupom.Location = new System.Drawing.Point(117, 423);
+            this.tbTotalCupom.MaxLength = 10;
+            this.tbTotalCupom.Name = "tbTotalCupom";
+            this.tbTotalCupom.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbTotalCupom.Size = new System.Drawing.Size(159, 20);
+            this.tbTotalCupom.TabIndex = 44;
+            this.tbTotalCupom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbTotalCupom_KeyPress);
+            this.tbTotalCupom.Leave += new System.EventHandler(this.tbTotalCupom_Leave);
+            // 
+            // lblTotalCupom
+            // 
+            this.lblTotalCupom.AutoSize = true;
+            this.lblTotalCupom.Location = new System.Drawing.Point(6, 426);
+            this.lblTotalCupom.Name = "lblTotalCupom";
+            this.lblTotalCupom.Size = new System.Drawing.Size(67, 13);
+            this.lblTotalCupom.TabIndex = 43;
+            this.lblTotalCupom.Text = "Total Cupom";
+            // 
+            // tbTotal
+            // 
+            this.tbTotal.Location = new System.Drawing.Point(117, 402);
+            this.tbTotal.MaxLength = 10;
+            this.tbTotal.Name = "tbTotal";
+            this.tbTotal.ReadOnly = true;
+            this.tbTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbTotal.Size = new System.Drawing.Size(159, 20);
+            this.tbTotal.TabIndex = 42;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(6, 405);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(31, 13);
+            this.lblTotal.TabIndex = 41;
+            this.lblTotal.Text = "Total";
+            // 
+            // tbExtra
+            // 
+            this.tbExtra.Location = new System.Drawing.Point(117, 381);
+            this.tbExtra.MaxLength = 10;
+            this.tbExtra.Name = "tbExtra";
+            this.tbExtra.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbExtra.Size = new System.Drawing.Size(159, 20);
+            this.tbExtra.TabIndex = 40;
+            this.tbExtra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbExtra_KeyPress);
+            this.tbExtra.Leave += new System.EventHandler(this.tbExtra_Leave);
+            // 
+            // lblExtra
+            // 
+            this.lblExtra.AutoSize = true;
+            this.lblExtra.Location = new System.Drawing.Point(6, 384);
+            this.lblExtra.Name = "lblExtra";
+            this.lblExtra.Size = new System.Drawing.Size(31, 13);
+            this.lblExtra.TabIndex = 39;
+            this.lblExtra.Text = "Extra";
+            // 
             // tbServelar
             // 
             this.tbServelar.Location = new System.Drawing.Point(117, 360);
@@ -136,6 +215,8 @@
             this.tbServelar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbServelar.Size = new System.Drawing.Size(159, 20);
             this.tbServelar.TabIndex = 38;
+            this.tbServelar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbServelar_KeyPress);
+            this.tbServelar.Leave += new System.EventHandler(this.tbServelar_Leave);
             // 
             // lblServelar
             // 
@@ -154,6 +235,8 @@
             this.tbTroco.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbTroco.Size = new System.Drawing.Size(159, 20);
             this.tbTroco.TabIndex = 36;
+            this.tbTroco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbTroco_KeyPress);
+            this.tbTroco.Leave += new System.EventHandler(this.tbTroco_Leave);
             // 
             // lblTroco
             // 
@@ -172,6 +255,8 @@
             this.tbDevol.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbDevol.Size = new System.Drawing.Size(159, 20);
             this.tbDevol.TabIndex = 34;
+            this.tbDevol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDevol_KeyPress);
+            this.tbDevol.Leave += new System.EventHandler(this.tbDevol_Leave);
             // 
             // lblDevol
             // 
@@ -190,6 +275,8 @@
             this.tbCompCred.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbCompCred.Size = new System.Drawing.Size(159, 20);
             this.tbCompCred.TabIndex = 32;
+            this.tbCompCred.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCompCred_KeyPress);
+            this.tbCompCred.Leave += new System.EventHandler(this.tbCompCred_Leave);
             // 
             // lblCompCred
             // 
@@ -208,6 +295,8 @@
             this.tbPagMerc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbPagMerc.Size = new System.Drawing.Size(159, 20);
             this.tbPagMerc.TabIndex = 30;
+            this.tbPagMerc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPagMerc_KeyPress);
+            this.tbPagMerc.Leave += new System.EventHandler(this.tbPagMerc_Leave);
             // 
             // lblPagMerc
             // 
@@ -235,6 +324,8 @@
             this.tbBanco.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbBanco.Size = new System.Drawing.Size(159, 20);
             this.tbBanco.TabIndex = 26;
+            this.tbBanco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbBanco_KeyPress);
+            this.tbBanco.Leave += new System.EventHandler(this.tbBanco_Leave);
             // 
             // tbDespesa
             // 
@@ -244,6 +335,8 @@
             this.tbDespesa.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbDespesa.Size = new System.Drawing.Size(159, 20);
             this.tbDespesa.TabIndex = 24;
+            this.tbDespesa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDespesa_KeyPress);
+            this.tbDespesa.Leave += new System.EventHandler(this.tbDespesa_Leave);
             // 
             // lblDespesa
             // 
@@ -462,81 +555,6 @@
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Caixa";
-            // 
-            // tbExtra
-            // 
-            this.tbExtra.Location = new System.Drawing.Point(117, 381);
-            this.tbExtra.MaxLength = 10;
-            this.tbExtra.Name = "tbExtra";
-            this.tbExtra.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbExtra.Size = new System.Drawing.Size(159, 20);
-            this.tbExtra.TabIndex = 40;
-            // 
-            // lblExtra
-            // 
-            this.lblExtra.AutoSize = true;
-            this.lblExtra.Location = new System.Drawing.Point(6, 384);
-            this.lblExtra.Name = "lblExtra";
-            this.lblExtra.Size = new System.Drawing.Size(31, 13);
-            this.lblExtra.TabIndex = 39;
-            this.lblExtra.Text = "Extra";
-            // 
-            // tbTotal
-            // 
-            this.tbTotal.Location = new System.Drawing.Point(117, 402);
-            this.tbTotal.MaxLength = 10;
-            this.tbTotal.Name = "tbTotal";
-            this.tbTotal.ReadOnly = true;
-            this.tbTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbTotal.Size = new System.Drawing.Size(159, 20);
-            this.tbTotal.TabIndex = 42;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(6, 405);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(31, 13);
-            this.lblTotal.TabIndex = 41;
-            this.lblTotal.Text = "Total";
-            // 
-            // tbTotalCupom
-            // 
-            this.tbTotalCupom.Location = new System.Drawing.Point(117, 423);
-            this.tbTotalCupom.MaxLength = 10;
-            this.tbTotalCupom.Name = "tbTotalCupom";
-            this.tbTotalCupom.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbTotalCupom.Size = new System.Drawing.Size(159, 20);
-            this.tbTotalCupom.TabIndex = 44;
-            // 
-            // lblTotalCupom
-            // 
-            this.lblTotalCupom.AutoSize = true;
-            this.lblTotalCupom.Location = new System.Drawing.Point(6, 426);
-            this.lblTotalCupom.Name = "lblTotalCupom";
-            this.lblTotalCupom.Size = new System.Drawing.Size(67, 13);
-            this.lblTotalCupom.TabIndex = 43;
-            this.lblTotalCupom.Text = "Total Cupom";
-            // 
-            // tbDiferenca
-            // 
-            this.tbDiferenca.Location = new System.Drawing.Point(117, 444);
-            this.tbDiferenca.MaxLength = 10;
-            this.tbDiferenca.Name = "tbDiferenca";
-            this.tbDiferenca.ReadOnly = true;
-            this.tbDiferenca.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbDiferenca.Size = new System.Drawing.Size(159, 20);
-            this.tbDiferenca.TabIndex = 46;
-            // 
-            // lblDirefenca
-            // 
-            this.lblDirefenca.AutoSize = true;
-            this.lblDirefenca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDirefenca.Location = new System.Drawing.Point(6, 447);
-            this.lblDirefenca.Name = "lblDirefenca";
-            this.lblDirefenca.Size = new System.Drawing.Size(62, 13);
-            this.lblDirefenca.TabIndex = 45;
-            this.lblDirefenca.Text = "Diferença";
             // 
             // frmConfCaixa
             // 
