@@ -77,12 +77,20 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tslDataHora = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tbCredCli = new System.Windows.Forms.TextBox();
+            this.lblCredCli = new System.Windows.Forms.Label();
+            this.tbSaldoAnt = new System.Windows.Forms.TextBox();
+            this.lblSaldoAnt = new System.Windows.Forms.Label();
             this.gbxCaixa.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxCaixa
             // 
+            this.gbxCaixa.Controls.Add(this.tbSaldoAnt);
+            this.gbxCaixa.Controls.Add(this.lblSaldoAnt);
+            this.gbxCaixa.Controls.Add(this.tbCredCli);
+            this.gbxCaixa.Controls.Add(this.lblCredCli);
             this.gbxCaixa.Controls.Add(this.tbDiferenca);
             this.gbxCaixa.Controls.Add(this.lblDirefenca);
             this.gbxCaixa.Controls.Add(this.tbTotalCupom);
@@ -127,7 +135,7 @@
             this.gbxCaixa.Controls.Add(this.lblOperador);
             this.gbxCaixa.Location = new System.Drawing.Point(5, 4);
             this.gbxCaixa.Name = "gbxCaixa";
-            this.gbxCaixa.Size = new System.Drawing.Size(282, 478);
+            this.gbxCaixa.Size = new System.Drawing.Size(282, 537);
             this.gbxCaixa.TabIndex = 0;
             this.gbxCaixa.TabStop = false;
             this.gbxCaixa.Text = "Caixa";
@@ -135,19 +143,20 @@
             // 
             // tbDiferenca
             // 
-            this.tbDiferenca.Location = new System.Drawing.Point(117, 444);
+            this.tbDiferenca.Location = new System.Drawing.Point(117, 498);
             this.tbDiferenca.MaxLength = 10;
             this.tbDiferenca.Name = "tbDiferenca";
             this.tbDiferenca.ReadOnly = true;
             this.tbDiferenca.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbDiferenca.Size = new System.Drawing.Size(159, 20);
-            this.tbDiferenca.TabIndex = 46;
+            this.tbDiferenca.TabIndex = 50;
+            this.tbDiferenca.TabStop = false;
             // 
             // lblDirefenca
             // 
             this.lblDirefenca.AutoSize = true;
             this.lblDirefenca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDirefenca.Location = new System.Drawing.Point(6, 447);
+            this.lblDirefenca.Location = new System.Drawing.Point(6, 501);
             this.lblDirefenca.Name = "lblDirefenca";
             this.lblDirefenca.Size = new System.Drawing.Size(62, 13);
             this.lblDirefenca.TabIndex = 45;
@@ -155,19 +164,20 @@
             // 
             // tbTotalCupom
             // 
-            this.tbTotalCupom.Location = new System.Drawing.Point(117, 423);
+            this.tbTotalCupom.Location = new System.Drawing.Point(117, 477);
             this.tbTotalCupom.MaxLength = 10;
             this.tbTotalCupom.Name = "tbTotalCupom";
             this.tbTotalCupom.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbTotalCupom.Size = new System.Drawing.Size(159, 20);
-            this.tbTotalCupom.TabIndex = 44;
+            this.tbTotalCupom.TabIndex = 48;
+            this.tbTotalCupom.Enter += new System.EventHandler(this.tbTotalCupom_Enter);
             this.tbTotalCupom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbTotalCupom_KeyPress);
             this.tbTotalCupom.Leave += new System.EventHandler(this.tbTotalCupom_Leave);
             // 
             // lblTotalCupom
             // 
             this.lblTotalCupom.AutoSize = true;
-            this.lblTotalCupom.Location = new System.Drawing.Point(6, 426);
+            this.lblTotalCupom.Location = new System.Drawing.Point(6, 480);
             this.lblTotalCupom.Name = "lblTotalCupom";
             this.lblTotalCupom.Size = new System.Drawing.Size(67, 13);
             this.lblTotalCupom.TabIndex = 43;
@@ -175,18 +185,19 @@
             // 
             // tbTotal
             // 
-            this.tbTotal.Location = new System.Drawing.Point(117, 402);
+            this.tbTotal.Location = new System.Drawing.Point(117, 456);
             this.tbTotal.MaxLength = 10;
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.ReadOnly = true;
             this.tbTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbTotal.Size = new System.Drawing.Size(159, 20);
-            this.tbTotal.TabIndex = 42;
+            this.tbTotal.TabIndex = 46;
+            this.tbTotal.TabStop = false;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(6, 405);
+            this.lblTotal.Location = new System.Drawing.Point(6, 459);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(31, 13);
             this.lblTotal.TabIndex = 41;
@@ -194,19 +205,19 @@
             // 
             // tbExtra
             // 
-            this.tbExtra.Location = new System.Drawing.Point(117, 381);
+            this.tbExtra.Location = new System.Drawing.Point(117, 423);
             this.tbExtra.MaxLength = 10;
             this.tbExtra.Name = "tbExtra";
             this.tbExtra.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbExtra.Size = new System.Drawing.Size(159, 20);
-            this.tbExtra.TabIndex = 40;
+            this.tbExtra.TabIndex = 44;
             this.tbExtra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbExtra_KeyPress);
             this.tbExtra.Leave += new System.EventHandler(this.tbExtra_Leave);
             // 
             // lblExtra
             // 
             this.lblExtra.AutoSize = true;
-            this.lblExtra.Location = new System.Drawing.Point(6, 384);
+            this.lblExtra.Location = new System.Drawing.Point(6, 426);
             this.lblExtra.Name = "lblExtra";
             this.lblExtra.Size = new System.Drawing.Size(31, 13);
             this.lblExtra.TabIndex = 39;
@@ -565,7 +576,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslDataHora});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 489);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 530);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(299, 22);
             this.statusStrip1.TabIndex = 2;
@@ -577,11 +588,51 @@
             this.tslDataHora.Size = new System.Drawing.Size(179, 17);
             this.tslDataHora.Text = "Desenvolvido Por Sam Velasquez";
             // 
+            // tbCredCli
+            // 
+            this.tbCredCli.Location = new System.Drawing.Point(117, 381);
+            this.tbCredCli.MaxLength = 10;
+            this.tbCredCli.Name = "tbCredCli";
+            this.tbCredCli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbCredCli.Size = new System.Drawing.Size(159, 20);
+            this.tbCredCli.TabIndex = 40;
+            this.tbCredCli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCredCli_KeyPress);
+            this.tbCredCli.Leave += new System.EventHandler(this.tbCredCli_Leave);
+            // 
+            // lblCredCli
+            // 
+            this.lblCredCli.AutoSize = true;
+            this.lblCredCli.Location = new System.Drawing.Point(6, 384);
+            this.lblCredCli.Name = "lblCredCli";
+            this.lblCredCli.Size = new System.Drawing.Size(75, 13);
+            this.lblCredCli.TabIndex = 47;
+            this.lblCredCli.Text = "Crédito Cliente";
+            // 
+            // tbSaldoAnt
+            // 
+            this.tbSaldoAnt.Location = new System.Drawing.Point(117, 402);
+            this.tbSaldoAnt.MaxLength = 10;
+            this.tbSaldoAnt.Name = "tbSaldoAnt";
+            this.tbSaldoAnt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbSaldoAnt.Size = new System.Drawing.Size(159, 20);
+            this.tbSaldoAnt.TabIndex = 42;
+            this.tbSaldoAnt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSaldoAnt_KeyPress);
+            this.tbSaldoAnt.Leave += new System.EventHandler(this.tbSaldoAnt_Leave);
+            // 
+            // lblSaldoAnt
+            // 
+            this.lblSaldoAnt.AutoSize = true;
+            this.lblSaldoAnt.Location = new System.Drawing.Point(6, 405);
+            this.lblSaldoAnt.Name = "lblSaldoAnt";
+            this.lblSaldoAnt.Size = new System.Drawing.Size(73, 13);
+            this.lblSaldoAnt.TabIndex = 49;
+            this.lblSaldoAnt.Text = "Saldo Anterior";
+            // 
             // frmConfCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 511);
+            this.ClientSize = new System.Drawing.Size(299, 552);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.gbxCaixa);
@@ -648,5 +699,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tslDataHora;
+        private System.Windows.Forms.TextBox tbSaldoAnt;
+        private System.Windows.Forms.Label lblSaldoAnt;
+        private System.Windows.Forms.TextBox tbCredCli;
+        private System.Windows.Forms.Label lblCredCli;
     }
 }

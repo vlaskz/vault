@@ -10,7 +10,7 @@ namespace Vault
         {
             InitializeComponent();
         }                                                                
-                                                                                                    /*Ao tornar uma unica instância de dos campos, , trocando somente o numero
+ /*Ao tornar uma unica instância de dos campos, , trocando somente o numero
                                                                                                     do checkout, precisamos criar uma forma de controlar as alterações.
                                                                                                     Levando em consideração o fato de ás vezes os operadores de caixa
                                                                                                     trocarem de checkout.
@@ -47,6 +47,10 @@ namespace Vault
 
         private void formatTextBox(TextBox tb)
         {
+            if (tb.Text == "")
+            {
+                tb.Text = "0";
+            }
             tb.MaxLength = 10;
          //   tb.Text = tb.Text.PadRight(8);
         }
@@ -64,7 +68,7 @@ namespace Vault
 
         private static void validateTextBox(KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar) && !char.IsPunctuation(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            if (!char.IsNumber(e.KeyChar) && e.KeyChar !=',' && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true;
             }
@@ -124,8 +128,6 @@ namespace Vault
             tbSaldoAtual.ReadOnly = false;
 
         }
-
-      
 
         private void tbNP_Leave(object sender, EventArgs e)
         {
@@ -268,7 +270,55 @@ namespace Vault
             validateTextBox(e);
         }
 
-       
+        private void tbTotalCupom_Enter(object sender, EventArgs e)
+        {
+            decimal result =
+              
+               
+                Convert.ToDecimal(tbSaldoAtual.Text) +
+                Convert.ToDecimal(tbDinheiro.Text) +
+                Convert.ToDecimal(tbCartao.Text )+
+                Convert.ToDecimal(tbNP.Text) +
+                Convert.ToDecimal(tbDebAuto.Text) +
+                Convert.ToDecimal(tbCheque.Text) +
+                Convert.ToDecimal(tbBoleto.Text) +
+                Convert.ToDecimal(tbDesconto.Text) +
+                Convert.ToDecimal(tbDespesa.Text) +
+                Convert.ToDecimal(tbBanco.Text) +
+                Convert.ToDecimal(tbPagMerc.Text) +
+                Convert.ToDecimal(tbCompCred.Text) +
+                Convert.ToDecimal(tbDevol.Text) +
+                Convert.ToDecimal(tbTroco.Text) +
+                Convert.ToDecimal(tbServelar.Text) -
+                Convert.ToDecimal(tbCredCli.Text) -
+                Convert.ToDecimal(tbSaldoAnt.Text) -
+                Convert.ToDecimal(tbExtra.Text);
+
+
+            tbTotalCupom.Text = result.ToString();
+
+
+        }
+
+        private void tbCredCli_Leave(object sender, EventArgs e)
+        {
+            formatTextBox(tbCredCli);
+        }
+
+        private void tbCredCli_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
+
+        private void tbSaldoAnt_Leave(object sender, EventArgs e)
+        {
+            formatTextBox(tbSaldoAnt);
+        }
+
+        private void tbSaldoAnt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validateTextBox(e);
+        }
     }
 }
 
