@@ -13,7 +13,6 @@ namespace Vault
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            new Config().CreateDatabase();
             new frmInicio().ShowDialog();
 
             

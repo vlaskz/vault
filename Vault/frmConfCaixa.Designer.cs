@@ -81,8 +81,15 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tslDataHora = new System.Windows.Forms.ToolStripStatusLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbxData = new System.Windows.Forms.ComboBox();
+            this.vaultDataSet = new Vault.vaultDataSet();
+            this.confcaixaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.confcaixaTableAdapter = new Vault.vaultDataSetTableAdapters.confcaixaTableAdapter();
             this.gbxCaixa.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vaultDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.confcaixaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxCaixa
@@ -133,9 +140,9 @@
             this.gbxCaixa.Controls.Add(this.lblSaldoAtual);
             this.gbxCaixa.Controls.Add(this.cbxOperador);
             this.gbxCaixa.Controls.Add(this.lblOperador);
-            this.gbxCaixa.Location = new System.Drawing.Point(5, 4);
+            this.gbxCaixa.Location = new System.Drawing.Point(5, 48);
             this.gbxCaixa.Name = "gbxCaixa";
-            this.gbxCaixa.Size = new System.Drawing.Size(282, 537);
+            this.gbxCaixa.Size = new System.Drawing.Size(282, 530);
             this.gbxCaixa.TabIndex = 0;
             this.gbxCaixa.TabStop = false;
             this.gbxCaixa.Text = "Caixa";
@@ -616,7 +623,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslDataHora});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 530);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 573);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(299, 22);
             this.statusStrip1.TabIndex = 2;
@@ -628,11 +635,44 @@
             this.tslDataHora.Size = new System.Drawing.Size(179, 17);
             this.tslDataHora.Text = "Desenvolvido Por Sam Velasquez";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Data:";
+            // 
+            // cbxData
+            // 
+            this.cbxData.FormattingEnabled = true;
+            this.cbxData.Location = new System.Drawing.Point(122, 21);
+            this.cbxData.Name = "cbxData";
+            this.cbxData.Size = new System.Drawing.Size(159, 21);
+            this.cbxData.TabIndex = 5;
+            // 
+            // vaultDataSet
+            // 
+            this.vaultDataSet.DataSetName = "vaultDataSet";
+            this.vaultDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // confcaixaBindingSource
+            // 
+            this.confcaixaBindingSource.DataMember = "confcaixa";
+            this.confcaixaBindingSource.DataSource = this.vaultDataSet;
+            // 
+            // confcaixaTableAdapter
+            // 
+            this.confcaixaTableAdapter.ClearBeforeFill = true;
+            // 
             // frmConfCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 552);
+            this.ClientSize = new System.Drawing.Size(299, 595);
+            this.Controls.Add(this.cbxData);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.gbxCaixa);
@@ -645,6 +685,8 @@
             this.gbxCaixa.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vaultDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.confcaixaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -703,5 +745,10 @@
         private System.Windows.Forms.Label lblSaldoAnt;
         private System.Windows.Forms.TextBox tbCredCli;
         private System.Windows.Forms.Label lblCredCli;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbxData;
+        private vaultDataSet vaultDataSet;
+        private System.Windows.Forms.BindingSource confcaixaBindingSource;
+        private vaultDataSetTableAdapters.confcaixaTableAdapter confcaixaTableAdapter;
     }
 }

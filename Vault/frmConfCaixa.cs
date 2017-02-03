@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using System.Data;
 
 namespace Vault
 {
@@ -9,33 +9,44 @@ namespace Vault
         public frmConfCaixa()
         {
             InitializeComponent();
-        }                                                                
- /*Ao tornar uma unica instância de dos campos, , trocando somente o numero
-                                                                                                    do checkout, precisamos criar uma forma de controlar as alterações.
-                                                                                                    Levando em consideração o fato de ás vezes os operadores de caixa
-                                                                                                    trocarem de checkout.
-                                                                                                    provavelmente inserir uma comboBox, e alterar o titulo da gbox
-                                                                                                    conforme o checkout e o operador.*/
+        }
+
+
         public void carregaDados()
         {
-            DatFileController dc = new DatFileController(); //inicializa a classe que manipula os  dados.
+            mySqlConnectionFactory db = new mySqlConnectionFactory();
 
-            for (int i = 0; i < dc.read(Config.operador).Count; i++)//carrega operadores de caixa para o combobox
-                cbxOperador.Items.Add(dc.read(Config.operador)[i]);
+          db.testConnection();
 
-            for (int i = 0; i < dc.read(Config.checkout).Count; i++)//carrega checkouts de caixa para o combobox
-                cbxCheckout.Items.Add(dc.read(Config.checkout)[i]);
+            
+              cbxCheckout.DropDownStyle = ComboBoxStyle.DropDownList;
+              cbxCheckout.DataSource = db.select("checkout", "SELECT numcheckout FROM CHECKOUT");
+              cbxCheckout.ValueMember = "numcheckout";
+              cbxCheckout.DisplayMember = "numcheckout";
+              cbxCheckout.Update();
 
-          
+            cbxOperador.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxOperador.DataSource = db.select("operador", "SELECT cod,nome FROM operador");
+            cbxOperador.ValueMember = "nome";
+            cbxOperador.DisplayMember = "cod";
+            cbxOperador.Update();
+
+            cbxData.DropDownStyle = ComboBoxStyle.DropDown;
+            cbxData.DataSource = db.select("confcaixa", "SELECT data from confcaixa");
+            cbxData.ValueMember = "data";
+            cbxData.DisplayMember = "data";
+            cbxData.Update();
         }
         
         private void frmConfCaixa_Load(object sender, EventArgs e)
         {
-            new ToolTip().SetToolTip(lblCheckout,"Duplo clique no nome do campo para desbloquear");
-            new ToolTip().SetToolTip(lblOperador, "Duplo clique no nome do campo para desbloquear");
-            new ToolTip().SetToolTip(lblSaldoAtual, "Duplo clique no nome do campo para desbloquear");
-            DatFileController dc = new DatFileController();
-            carregaDados();
+            
+            string message = "Duplo clique no nome do campo para desbloquear";
+            new ToolTip().SetToolTip(lblCheckout,message);
+            new ToolTip().SetToolTip(lblOperador, message);
+            new ToolTip().SetToolTip(lblSaldoAtual,message);
+
+           carregaDados();
 
         }
 
@@ -51,14 +62,13 @@ namespace Vault
             {
                 tb.Text = "0";
             }
-            tb.MaxLength = 10;
-         //   tb.Text = tb.Text.PadRight(8);
+            tb.MaxLength = 10;        
         }
 
         private void updateGbxCaixa()
         {
             if(cbxCheckout.SelectedItem!=null&&cbxOperador.SelectedItem!=null)
-            gbxCaixa.Text = "Caixa:" + cbxCheckout.SelectedItem.ToString() + "." + cbxOperador.SelectedItem.ToString();
+            gbxCaixa.Text = "Caixa:" + cbxCheckout.SelectedValue.ToString() + "." + cbxOperador.SelectedValue.ToString();
         }
         
         private void tbSaldoAtual_KeyPress(object sender, KeyPressEventArgs e)
@@ -68,10 +78,7 @@ namespace Vault
 
         private static void validateTextBox(KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar) &&
-                e.KeyChar !=',' &&
-                e.KeyChar != (char)Keys.Back &&
-                e.KeyChar !='-')
+            if (!char.IsNumber(e.KeyChar) && e.KeyChar !=',' && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true;
             }
@@ -322,6 +329,8 @@ namespace Vault
         {
             validateTextBox(e);
         }
+
+       
     }
 }
 
