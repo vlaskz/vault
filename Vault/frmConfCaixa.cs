@@ -31,11 +31,7 @@ namespace Vault
             cbxOperador.DisplayMember = "cod";
             cbxOperador.Update();
 
-            cbxData.DropDownStyle = ComboBoxStyle.DropDown;
-            cbxData.DataSource = db.select("confcaixa", "SELECT data from confcaixa");
-            cbxData.ValueMember = "data";
-            cbxData.DisplayMember = "data";
-            cbxData.Update();
+           
         }
         
         private void frmConfCaixa_Load(object sender, EventArgs e)
@@ -330,7 +326,10 @@ namespace Vault
             validateTextBox(e);
         }
 
-       
+        private void cbxData_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

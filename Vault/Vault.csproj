@@ -114,6 +114,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vaultDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="vaultDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vaultDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="vaultTBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -159,6 +164,17 @@
     </None>
     <None Include="vaultDataSet.xss">
       <DependentUpon>vaultDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="vaultDataSet1.xsc">
+      <DependentUpon>vaultDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="vaultDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vaultDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vaultDataSet1.xss">
+      <DependentUpon>vaultDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Vault_TemporaryKey.pfx" />
   </ItemGroup>

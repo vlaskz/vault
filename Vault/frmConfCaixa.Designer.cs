@@ -82,10 +82,10 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tslDataHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbxData = new System.Windows.Forms.ComboBox();
             this.vaultDataSet = new Vault.vaultDataSet();
             this.confcaixaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.confcaixaTableAdapter = new Vault.vaultDataSetTableAdapters.confcaixaTableAdapter();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.gbxCaixa.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vaultDataSet)).BeginInit();
@@ -644,14 +644,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Data:";
             // 
-            // cbxData
-            // 
-            this.cbxData.FormattingEnabled = true;
-            this.cbxData.Location = new System.Drawing.Point(122, 21);
-            this.cbxData.Name = "cbxData";
-            this.cbxData.Size = new System.Drawing.Size(159, 21);
-            this.cbxData.TabIndex = 5;
-            // 
             // vaultDataSet
             // 
             this.vaultDataSet.DataSetName = "vaultDataSet";
@@ -666,12 +658,21 @@
             // 
             this.confcaixaTableAdapter.ClearBeforeFill = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(49, 22);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(99, 20);
+            this.dateTimePicker1.TabIndex = 5;
+            // 
             // frmConfCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 595);
-            this.Controls.Add(this.cbxData);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox5);
@@ -746,9 +747,9 @@
         private System.Windows.Forms.TextBox tbCredCli;
         private System.Windows.Forms.Label lblCredCli;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbxData;
         private vaultDataSet vaultDataSet;
         private System.Windows.Forms.BindingSource confcaixaBindingSource;
         private vaultDataSetTableAdapters.confcaixaTableAdapter confcaixaTableAdapter;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

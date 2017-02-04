@@ -28,9 +28,20 @@ namespace Vault
                 con.Close();
             }
             return result;
-            
-            
 
+           
+
+        }
+
+        public bool insert(string table, string command)
+        {
+            using (MySqlCommand comm = new MySqlCommand(command, con))
+            {
+                con.Open();
+                bool status = true;
+                return status;
+            }
+            
         }
 
 
