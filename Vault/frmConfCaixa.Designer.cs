@@ -77,18 +77,15 @@
             this.lblSaldoAtual = new System.Windows.Forms.Label();
             this.cbxOperador = new System.Windows.Forms.ComboBox();
             this.lblOperador = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tslDataHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.vaultDataSet = new Vault.vaultDataSet();
             this.confcaixaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.confcaixaTableAdapter = new Vault.vaultDataSetTableAdapters.confcaixaTableAdapter();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpData = new System.Windows.Forms.DateTimePicker();
+            this.btSalvar = new System.Windows.Forms.Button();
             this.gbxCaixa.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vaultDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.confcaixaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -610,22 +607,13 @@
             this.lblOperador.Text = "Operador";
             this.lblOperador.DoubleClick += new System.EventHandler(this.lblOperador_DoubleClick);
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Location = new System.Drawing.Point(953, 13);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(272, 478);
-            this.groupBox5.TabIndex = 1;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Caixa";
-            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslDataHora});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 573);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 633);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(299, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(295, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -646,36 +634,44 @@
             // 
             // vaultDataSet
             // 
-            this.vaultDataSet.DataSetName = "vaultDataSet";
-            this.vaultDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // confcaixaBindingSource
             // 
-            this.confcaixaBindingSource.DataMember = "confcaixa";
-            this.confcaixaBindingSource.DataSource = this.vaultDataSet;
             // 
             // confcaixaTableAdapter
             // 
-            this.confcaixaTableAdapter.ClearBeforeFill = true;
             // 
-            // dateTimePicker1
+            // dtpData
             // 
-            this.dateTimePicker1.CustomFormat = "";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(49, 22);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(99, 20);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtpData.CustomFormat = "";
+            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpData.Location = new System.Drawing.Point(49, 22);
+            this.dtpData.Name = "dtpData";
+            this.dtpData.Size = new System.Drawing.Size(99, 20);
+            this.dtpData.TabIndex = 5;
+            // 
+            // btSalvar
+            // 
+            this.btSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btSalvar.Image")));
+            this.btSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSalvar.Location = new System.Drawing.Point(187, 584);
+            this.btSalvar.Name = "btSalvar";
+            this.btSalvar.Size = new System.Drawing.Size(94, 35);
+            this.btSalvar.TabIndex = 6;
+            this.btSalvar.Text = "&Salvar";
+            this.btSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btSalvar.UseVisualStyleBackColor = true;
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
             // frmConfCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 595);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(295, 655);
+            this.Controls.Add(this.btSalvar);
+            this.Controls.Add(this.dtpData);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.gbxCaixa);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConfCaixa";
@@ -686,8 +682,6 @@
             this.gbxCaixa.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vaultDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.confcaixaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -698,7 +692,6 @@
         private System.Windows.Forms.GroupBox gbxCaixa;
         private System.Windows.Forms.ComboBox cbxOperador;
         private System.Windows.Forms.Label lblOperador;
-        private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label lblSaldoAtual;
         private System.Windows.Forms.TextBox tbSaldoAtual;
         private System.Windows.Forms.TextBox tbDinheiro;
@@ -747,9 +740,8 @@
         private System.Windows.Forms.TextBox tbCredCli;
         private System.Windows.Forms.Label lblCredCli;
         private System.Windows.Forms.Label label1;
-        private vaultDataSet vaultDataSet;
         private System.Windows.Forms.BindingSource confcaixaBindingSource;
-        private vaultDataSetTableAdapters.confcaixaTableAdapter confcaixaTableAdapter;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpData;
+        private System.Windows.Forms.Button btSalvar;
     }
 }

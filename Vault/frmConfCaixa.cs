@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Data;
 
 namespace Vault
 {
@@ -14,7 +13,7 @@ namespace Vault
 
         public void carregaDados()
         {
-            mySqlConnectionFactory db = new mySqlConnectionFactory();
+            MySqlDataManager db = new MySqlDataManager();
 
           db.testConnection();
 
@@ -25,11 +24,11 @@ namespace Vault
               cbxCheckout.DisplayMember = "numcheckout";
               cbxCheckout.Update();
 
-            cbxOperador.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbxOperador.DataSource = db.select("operador", "SELECT cod,nome FROM operador");
-            cbxOperador.ValueMember = "nome";
-            cbxOperador.DisplayMember = "cod";
-            cbxOperador.Update();
+              cbxOperador.DropDownStyle = ComboBoxStyle.DropDownList;
+              cbxOperador.DataSource = db.select("operador", "SELECT cod,nome FROM operador");
+              cbxOperador.ValueMember = "nome";
+              cbxOperador.DisplayMember = "cod";
+              cbxOperador.Update();
 
            
         }
@@ -326,9 +325,24 @@ namespace Vault
             validateTextBox(e);
         }
 
-        private void cbxData_SelectedIndexChanged(object sender, EventArgs e)
+      public string dataParaMySql()
         {
+            string[] dataAtual = dtpData.Value.ToString().Substring(0, 10).Split('/');
+            Array.Reverse(dataAtual);
 
+            string result = "";
+            foreach (string s in dataAtual)
+            {
+                result += s + '/';
+            }
+            result = result.Substring(0, 10);
+            return result;
+
+        }
+
+        private void btSalvar_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

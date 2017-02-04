@@ -132,10 +132,25 @@
   <metadata name="confcaixaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>522, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btSalvar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH6SURBVFhH7Za9SwNBEMXzr1lZWtsIFmJhIXYqKghCOgVB
+        0EJQBD8SSCGCiIiiIFHTKVYigkUMSEj8CEGEM2+ZOWY2c6eXM1Y++LGbzLv39qq9zL98zeRLgWQqd6Xw
+        53FEPUNV7fKNoN78TI2VS5Va8k0ZBFQbH6mwcqlSyzJagUmxcqlSyzJWXpupsXKpUssyWoFJsXKpUmt8
+        q+iGWJnySzMSq0zCPmSOrZ+F5cilSi1ZzvvHWiM1nAf4IFSpNbFx4sxyRcDd81vwUH031+/2AFmAy7Gn
+        Si0YJrcvnJFXDksDcvileE+VWhj6cMjtU73jvZVLlVqWEUFpsXKpUguD0bXT0IT9dbmWGs6TUKXWyOqx
+        G6KY97nLe/cWN62gTlY8L/N4pUotDMHwypF7CCvM3VipUgsDwIfoJlSpNbR86Ib++lvIPKrUguGncGAS
+        5CGoUmtw6SD4K6hSyzJ2C6rU6l/Yc8OBxf0Q/Od/YiVBZs3vlsI9VWqhzMIKBpXWlWv9L5E52UIx3FOl
+        Vl+24Ib+iiImbmYh/XwA7KlSay5/7oY+COIPkKiZhfQjG+AQ+E2V7eqd3QkATLzHNwHf7XEzC+nHAfg5
+        qrPFJoavVRA3s/D9DFVFq2d6M2BwqTDyf39m4fsZqokXvlxgllerHyRnFr4fUPy/WspkvgALpDv9YJJC
+        4QAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>28</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAAAAAAAEAIACORAEAlgAAAICAAAABACAAKAgBACRFAQBgYAAAAQAgAKiUAABMTQIASEgAAAEA

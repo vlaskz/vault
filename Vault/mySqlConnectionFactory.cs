@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Vault
 {
-    class mySqlConnectionFactory
+    class MySqlDataManager
     {
         
         MySqlConnection con = new MySqlConnection("server = localhost; user id = root; password=root;persistsecurityinfo=True;database=vault;port=8080;allowuservariables=True");
@@ -33,11 +33,13 @@ namespace Vault
 
         }
 
-        public bool insert(string table, string command)
+        public bool insert(string command)
         {
             using (MySqlCommand comm = new MySqlCommand(command, con))
             {
                 con.Open();
+
+
                 bool status = true;
                 return status;
             }
