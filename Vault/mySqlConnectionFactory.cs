@@ -7,21 +7,33 @@ namespace Vault
 {
     class MySqlDataManager
     {
-        
-        MySqlConnection con = new MySqlConnection("server = localhost; user id = root; password=root;persistsecurityinfo=True;database=vault;port=8080;allowuservariables=True");
 
-        public void testConnection()
+        public MySqlConnection genCon()
         {
-            con.Open();
-            MessageBox.Show(con.State.ToString());
-            con.Close();
+            return new MySqlConnection("server = localhost; user id = root; password=root;persistsecurityinfo=True;database=vault;port=8080;allowuservariables=True");
+        }
+
+        public string testConnection()
+        {
+            try
+            {
+                con.Open();
+                return con.State.ToString();
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+
+
         }
 
 
         public DataTable select(string table, string command)
         {
             DataTable result = new DataTable(table);
-            using(MySqlCommand comm = new MySqlCommand(command, con))
+            using (MySqlCommand comm = new MySqlCommand(command, con))
             {
                 con.Open();
                 result.Load(comm.ExecuteReader());
@@ -29,21 +41,8 @@ namespace Vault
             }
             return result;
 
-           
-
-        }
-
-        public bool insert(string command)
-        {
-            using (MySqlCommand comm = new MySqlCommand(command, con))
-            {
-                con.Open();
 
 
-                bool status = true;
-                return status;
-            }
-            
         }
 
 

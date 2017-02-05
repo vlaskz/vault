@@ -8,10 +8,11 @@ namespace Vault
     /*
      * estou neste dia(24/01/17) mudando um pouco a forma com que irei lidar com os dados.
      * pretendo passar a usar o mysql para armazenamento dos dados...
-     * uma vez criada a string de conexão e os selects funcionando beleza, tudo será mais facil. =)>--<
-     * 
+     * uma vez criada a string de conexão e os selects funcionando beleza, tudo será mais facil.  \O/
+     *                                                                                             )    (emoticon extremamente bem feito em 04/02/17
+     *                                                                                            /\
      * sendo assim, a classe DatFileController ficaria marcada como OBSOLETA, uma vez que não mais utilizaria arquivos DAT para salvamento dos dados.
-     * desta forma, estou reformulando o layout do backend desse software.
+     * desta forma, estou reformulando o backend.
      */
 
 

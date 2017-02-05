@@ -79,7 +79,7 @@
             this.lblOperador = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tslDataHora = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tslInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.confcaixaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dtpData = new System.Windows.Forms.DateTimePicker();
@@ -610,18 +610,18 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tslDataHora});
+            this.tslInfo});
             this.statusStrip1.Location = new System.Drawing.Point(0, 633);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(295, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // tslDataHora
+            // tslInfo
             // 
-            this.tslDataHora.Name = "tslDataHora";
-            this.tslDataHora.Size = new System.Drawing.Size(179, 17);
-            this.tslDataHora.Text = "Desenvolvido Por Sam Velasquez";
+            this.tslInfo.Name = "tslInfo";
+            this.tslInfo.Size = new System.Drawing.Size(179, 17);
+            this.tslInfo.Text = "Desenvolvido Por Sam Velasquez";
             // 
             // label1
             // 
@@ -631,15 +631,6 @@
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Data:";
-            // 
-            // vaultDataSet
-            // 
-            // 
-            // confcaixaBindingSource
-            // 
-            // 
-            // confcaixaTableAdapter
-            // 
             // 
             // dtpData
             // 
@@ -682,6 +673,7 @@
             this.gbxCaixa.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.confcaixaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -734,7 +726,7 @@
         private System.Windows.Forms.Label lblExtra;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel tslDataHora;
+        private System.Windows.Forms.ToolStripStatusLabel tslInfo;
         private System.Windows.Forms.TextBox tbSaldoAnt;
         private System.Windows.Forms.Label lblSaldoAnt;
         private System.Windows.Forms.TextBox tbCredCli;
