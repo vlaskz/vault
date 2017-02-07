@@ -37,7 +37,17 @@ namespace Vault
 
         private void frmConfCaixa_Load(object sender, EventArgs e)
         {
-
+            MySqlDataManager dm = new MySqlDataManager();
+            bool conectado = dm.testConnection();
+            if (conectado)
+            {
+                tslInfo.ForeColor = System.Drawing.Color.Green;
+                tslInfo.Text = "Conectado!";
+            }else
+            {
+                tslInfo.ForeColor = System.Drawing.Color.Red;
+                tslInfo.Text = "Sem Conexão!";
+            }
             string message = "Duplo clique no nome do campo para desbloquear";
             new ToolTip().SetToolTip(lblCheckout, message);
             new ToolTip().SetToolTip(lblOperador, message);
@@ -75,7 +85,7 @@ namespace Vault
 
         private static void validateTextBox(KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != (char)Keys.Back)
+            if (!char.IsNumber(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != (char)Keys.Back && e.KeyChar != '-')
             {
                 e.Handled = true;
             }
@@ -270,6 +280,7 @@ namespace Vault
         private void tbTotalCupom_Leave(object sender, EventArgs e)
         {
             formatTextBox((TextBox)(sender));
+            tbDiferenca.Text = Convert.ToString(Convert.ToDecimal(tbTotal.Text) - Convert.ToDecimal(tbTotalCupom.Text));
         }
 
         private void tbTotalCupom_KeyPress(object sender, KeyPressEventArgs e)
@@ -299,10 +310,10 @@ namespace Vault
                 Convert.ToDecimal(tbServelar.Text) -
                 Convert.ToDecimal(tbCredCli.Text) -
                 Convert.ToDecimal(tbSaldoAnt.Text) -
-                Convert.ToDecimal(tbExtra.Text);
+                Convert.ToDecimal(tbExtra.Text); 
 
 
-            tbTotalCupom.Text = result.ToString();
+            tbTotal.Text = result.ToString();
 
 
         }
@@ -331,114 +342,77 @@ namespace Vault
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
-
+            insert();
         }
         public void insert()
         {
-
-
-            MySqlConnection con = new MySqlDataManager().genCon();
-            using (MySqlCommand comm = new MySqlCommand())
+            string query = @"SELECT * FROM confcaixa where (data = '" + Tools.dataParaMySql(dtpData.Value.ToString()) + "') AND (checkout='" + cbxCheckout.SelectedValue.ToString() + "');";
+            DataTable result = new MySqlDataManager().select("vault.confcaixa", query);
+            if (result.Rows.Count > 0)
             {
-                try
+                MessageBox.Show("Registro existente.");
+            }
+            else
+            {
+                MySqlConnection con = new MySqlDataManager().genCon();
+                using (MySqlCommand comm = new MySqlCommand())
                 {
-                    comm.Connection = con;
-                    comm.CommandText = @"INSERT INTO confcaixa(
-data,
-checkout,
-cod_operador,
-nome_operador,
-saldo_atual,
-dinheiro,
-cartao,
-np,
-deb_auto,
-cheque,
-boleto,
-desconto, 
-despesa,
-banco, 
-pag_merc, 
-comp_credito, 
-devolucao, 
-troco, 
-servelar2, 
-cred_cli, 
-saldo_ant, 
-extra, 
-total, 
-total_cupom, 
-diferenca
-) VALUES (
-?data,
-?checkout,
-?cod_operador,
-?nome_operador,
-?saldo_atual,
-?dinheiro,
-?cartao,
-?np,
-?deb_auto,
-?cheque,
-?boleto,
-?desconto, 
-?despesa,
-?banco, 
-?pag_merc, 
-?comp_credito, 
-?devolucao, 
-?troco, 
-?servelar2, 
-?cred_cli, 
-?saldo_ant, 
-?extra,
-?total, 
-?total_cupom, 
-?diferenca
-)";
-                    con.Open();
+                    try
+                    {
+                        comm.Connection = con;
+                        comm.CommandText = @"INSERT INTO vault.confcaixa(
+                    data,checkout,cod_operador,nome_operador,
+                    saldo_atual,dinheiro,cartao,np,deb_auto,cheque,boleto,desconto, despesa,banco, pag_merc,
+                    comp_credito, devolucao, troco, servelar2, cred_cli, saldo_ant, extra, total, total_cupom,
+                    diferenca) 
+                    VALUES 
+                    (?data,?checkout,?cod_operador,?nome_operador,?saldo_atual,?dinheiro,?cartao,?np,?deb_auto,
+                    ?cheque,?boleto,?desconto, ?despesa,?banco, ?pag_merc, ?comp_credito, ?devolucao, ?troco, ?servelar2,
+                    ?cred_cli, ?saldo_ant, ?extra,?total, ?total_cupom, ?diferenca )";
+                        con.Open();
 
-                    comm.Parameters.AddWithValue("?data", Tools.dataParaMySql(dtpData.Value));
-                    comm.Parameters.AddWithValue("?checkout", cbxCheckout.SelectedValue.ToString());
-                    comm.Parameters.AddWithValue("?cod_operador", cbxOperador.SelectedItem.ToString());
-                    comm.Parameters.AddWithValue("?nome_operador", cbxOperador.SelectedValue.ToString());
-                    comm.Parameters.AddWithValue("?saldo_atual", Convert.ToDecimal(tbSaldoAtual.Text));
-                    comm.Parameters.AddWithValue("?dinheiro", Convert.ToDecimal(tbDinheiro.Text));
-                    comm.Parameters.AddWithValue("?cartao", Convert.ToDecimal(tbCartao.Text));
-                    comm.Parameters.AddWithValue("?np", Convert.ToDecimal(tbNP.Text));
-                    comm.Parameters.AddWithValue("?deb_auto", Convert.ToDecimal(tbDebAuto.Text));
-                    comm.Parameters.AddWithValue("?cheque", Convert.ToDecimal(tbCheque.Text));
-                    comm.Parameters.AddWithValue("?boleto", Convert.ToDecimal(tbBoleto.Text));
-                    comm.Parameters.AddWithValue("?desconto", Convert.ToDecimal(tbDesconto.Text));
-                    comm.Parameters.AddWithValue("?despesa", Convert.ToDecimal(tbDespesa.Text));
-                    comm.Parameters.AddWithValue("?banco", Convert.ToDecimal(tbBanco.Text));
-                    comm.Parameters.AddWithValue("?pag_merc", Convert.ToDecimal(tbPagMerc.Text));
-                    comm.Parameters.AddWithValue("?comp_credito", Convert.ToDecimal(tbCompCred.Text));
-                    comm.Parameters.AddWithValue("?devolucao", Convert.ToDecimal(tbDevol.Text));
-                    comm.Parameters.AddWithValue("?troco", Convert.ToDecimal(tbTroco.Text));
-                    comm.Parameters.AddWithValue("?servelar2", Convert.ToDecimal(tbServelar.Text));
-                    comm.Parameters.AddWithValue("?cred_cli", Convert.ToDecimal(tbCredCli.Text));
-                    comm.Parameters.AddWithValue("?saldo_ant", Convert.ToDecimal(tbSaldoAnt.Text));
-                    comm.Parameters.AddWithValue("?extra", Convert.ToDecimal(tbExtra.Text));
-                    comm.Parameters.AddWithValue("?total", Convert.ToDecimal(tbTotal.Text));
-                    comm.Parameters.AddWithValue("?total_cupom", Convert.ToDecimal(tbTotalCupom.Text));
-                    comm.Parameters.AddWithValue("?diferenca", Convert.ToDecimal(tbDiferenca.Text));
+                        comm.Parameters.AddWithValue("?data", Tools.dataParaMySql(dtpData.Value.ToString()));
+                        comm.Parameters.AddWithValue("?checkout", cbxCheckout.SelectedValue.ToString());
+                        comm.Parameters.AddWithValue("?cod_operador", cbxOperador.Text);
+                        comm.Parameters.AddWithValue("?nome_operador", cbxOperador.SelectedValue.ToString());
+                        comm.Parameters.AddWithValue("?saldo_atual", Convert.ToDecimal(tbSaldoAtual.Text));
+                        comm.Parameters.AddWithValue("?dinheiro", Convert.ToDecimal(tbDinheiro.Text));
+                        comm.Parameters.AddWithValue("?cartao", Convert.ToDecimal(tbCartao.Text));
+                        comm.Parameters.AddWithValue("?np", Convert.ToDecimal(tbNP.Text));
+                        comm.Parameters.AddWithValue("?deb_auto", Convert.ToDecimal(tbDebAuto.Text));
+                        comm.Parameters.AddWithValue("?cheque", Convert.ToDecimal(tbCheque.Text));
+                        comm.Parameters.AddWithValue("?boleto", Convert.ToDecimal(tbBoleto.Text));
+                        comm.Parameters.AddWithValue("?desconto", Convert.ToDecimal(tbDesconto.Text));
+                        comm.Parameters.AddWithValue("?despesa", Convert.ToDecimal(tbDespesa.Text));
+                        comm.Parameters.AddWithValue("?banco", Convert.ToDecimal(tbBanco.Text));
+                        comm.Parameters.AddWithValue("?pag_merc", Convert.ToDecimal(tbPagMerc.Text));
+                        comm.Parameters.AddWithValue("?comp_credito", Convert.ToDecimal(tbCompCred.Text));
+                        comm.Parameters.AddWithValue("?devolucao", Convert.ToDecimal(tbDevol.Text));
+                        comm.Parameters.AddWithValue("?troco", Convert.ToDecimal(tbTroco.Text));
+                        comm.Parameters.AddWithValue("?servelar2", Convert.ToDecimal(tbServelar.Text));
+                        comm.Parameters.AddWithValue("?cred_cli", Convert.ToDecimal(tbCredCli.Text));
+                        comm.Parameters.AddWithValue("?saldo_ant", Convert.ToDecimal(tbSaldoAnt.Text));
+                        comm.Parameters.AddWithValue("?extra", Convert.ToDecimal(tbExtra.Text));
+                        comm.Parameters.AddWithValue("?total", Convert.ToDecimal(tbTotal.Text));
+                        comm.Parameters.AddWithValue("?total_cupom", Convert.ToDecimal(tbTotalCupom.Text));
+                        comm.Parameters.AddWithValue("?diferenca", Convert.ToDecimal(tbDiferenca.Text));
 
 
-                    comm.ExecuteNonQuery();
-                    MessageBox.Show("Salvo com sucesso!");
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show(e.ToString());
+                        comm.ExecuteNonQuery();
+                        MessageBox.Show("Salvo com sucesso!");
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.ToString());
+
+                    }
+
+
 
                 }
-
-
 
             }
-
-        }
+            }
 
     }
 }

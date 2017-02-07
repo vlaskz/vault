@@ -13,12 +13,13 @@ namespace Vault
             return new MySqlConnection("server = localhost; user id = root; password=root;persistsecurityinfo=True;database=vault;port=8080;allowuservariables=True");
         }
 
-        public string testConnection()
+        public bool testConnection()
         {
             try
             {
+                MySqlConnection con = new MySqlDataManager().genCon();
                 con.Open();
-                return con.State.ToString();
+                return (con.State == ConnectionState.Open);
             }
             catch (System.Exception)
             {
@@ -32,6 +33,7 @@ namespace Vault
 
         public DataTable select(string table, string command)
         {
+            MySqlConnection con = new MySqlDataManager().genCon();
             DataTable result = new DataTable(table);
             using (MySqlCommand comm = new MySqlCommand(command, con))
             {

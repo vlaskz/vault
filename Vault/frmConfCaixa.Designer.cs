@@ -666,6 +666,7 @@
             this.Controls.Add(this.gbxCaixa);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConfCaixa";
+            this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vault - ConfCaixa";
             this.Load += new System.EventHandler(this.frmConfCaixa_Load);
